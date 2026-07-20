@@ -9,7 +9,11 @@ const { validateEnv, getAllowedOrigins } = require('./config/env');
 validateEnv();
 
 const app = express();
-app.set('trust proxy', 1);
+
+// Hostinger/LiteSpeed/Nginx terminates HTTPS before Node and sends X-Forwarded-For.
+// Trust exactly the nearest proxy so express-rate-limit can use the real client IP.
+const trustProxyHops = Number(process.env.TRUST_PROXY_HOPS || 1);
+app.set('trust proxy', trustProxyHops);
 
 // Security
 app.use(helmet());
