@@ -23,7 +23,8 @@ node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
 ## Architecture
 
 - **Entry point:** `src/server.js` — Express app, middleware, route mounting, in that order.
-- **Auth:** JWT access token (15 min) + refresh token (30 days). Protected routes use
+- **Auth:** social sign-in creates or reuses an account, then returns a JWT access token
+  (15 min) + refresh token (30 days). Protected routes use
   `requireAuth` middleware (`src/middleware/auth.js`), which checks the token **before**
   any route handler runs — a request with a bad token never touches the database.
 - **Error handling:** every route is wrapped in `asyncHandler` (`src/middleware/asyncHandler.js`),
@@ -48,13 +49,11 @@ the original Next.js version 1:1.
 
 ## Not yet wired (same list as the Next.js version — nothing new here)
 
-1. **Email delivery** for password reset — `/api/auth/forgot-password` returns the
-   token directly for local testing. Swap for SendGrid/Resend/SES before production.
-2. **Push notifications** — `Notification` documents are created but nothing sends
+1. **Push notifications** — `Notification` documents are created but nothing sends
    FCM pushes yet.
-3. **Subscription webhooks** — `/api/subscription` PATCH is a stub. Wire it to
+2. **Subscription webhooks** — `/api/subscription` PATCH is a stub. Wire it to
    RevenueCat/Stripe webhook verification instead of trusting client input.
-4. **Cascade delete** on `DELETE /api/user/settings` (account deletion) — only
+3. **Cascade delete** on `DELETE /api/user/settings` (account deletion) — only
    deletes the User document currently; related collections are listed as a TODO
    in that file.
 

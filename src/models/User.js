@@ -4,11 +4,6 @@ const UserSchema = new mongoose.Schema(
   {
     fullName: { type: String, required: true },
     email: { type: String, required: true, unique: true, lowercase: true, trim: true },
-    //passwordHash: { type: String, required: true },
-    passwordHash: {
-      type: String,
-      default: null
-    },
     uid: {
       type: String,
       default: null,
@@ -36,11 +31,6 @@ const UserSchema = new mongoose.Schema(
       deviceId: String,
     },
 
-    role: {
-      type: String,
-      enum: ["ceo_founder", "professional", "entrepreneur", "seeker"],
-      default: "seeker",
-    },
     role: {
       type: String,
       enum: ["ceo_founder", "professional", "entrepreneur", "seeker"],

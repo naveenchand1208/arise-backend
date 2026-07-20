@@ -34,8 +34,7 @@ app.use(helmet());
 app.use(cors()); // mobile apps don't need this, but a future web admin panel will
 app.use(express.json());
 
-// Rate limit auth routes specifically — closes a gap flagged during the
-// Next.js version's review (login/register were brute-forceable).
+// Rate limit social auth routes specifically.
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 20, // 20 attempts per IP per window

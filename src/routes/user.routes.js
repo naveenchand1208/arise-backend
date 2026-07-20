@@ -16,7 +16,7 @@ router.get(
   asyncHandler(async (req, res) => {
     await connectDB();
     const [user, streak, latestScore] = await Promise.all([
-      User.findById(req.userId).select("-passwordHash"),
+      User.findById(req.userId),
       Streak.findOne({ userId: req.userId }),
       BeliefScore.findOne({ userId: req.userId }).sort({ date: -1 }),
     ]);
