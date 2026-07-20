@@ -1,45 +1,47 @@
 const express = require('express');
 const router = express.Router();
 const {
-  register,
-  login,
   socialLogin,
   logout,
-  forgotPassword,
-  resetPassword,
   refreshToken,
   adminLogin
 } = require('../controllers/authController');
 
-// @route   POST /api/auth/register
-// @desc    Register new user
+// @route   POST /api/auth/google
+// @desc    Login or create user with a Firebase Google identity
 // @access  Public
-router.post('/register', register);
+router.post('/google', (req, res, next) => {
+  req.params.provider = 'google';
+  return socialLogin(req, res, next);
+});
 
-// @route   POST /api/auth/login
-// @desc    Login user
+// @route   POST /api/auth/apple
+// @desc    Login or create user with a Firebase Apple identity
 // @access  Public
-router.post('/login', login);
+router.post('/apple', (req, res, next) => {
+  req.params.provider = 'apple';
+  return socialLogin(req, res, next);
+});
 
 // @route   POST /api/auth/social-login
 // @desc    Login or create user with Firebase Google/Apple identity
 // @access  Public
 router.post('/social-login', socialLogin);
 
+// Backward-compatible aliases for older app builds.
+router.post('/googleSignUp', (req, res, next) => {
+  req.params.provider = 'google';
+  return socialLogin(req, res, next);
+});
+router.post('/googleLogin', (req, res, next) => {
+  req.params.provider = 'google';
+  return socialLogin(req, res, next);
+});
+
 // @route   POST /api/auth/logout
 // @desc    Logout user (invalidate refresh token)
 // @access  Public
 router.post('/logout', logout);
-
-// @route   POST /api/auth/forgot-password
-// @desc    Send password reset email
-// @access  Public
-router.post('/forgot-password', forgotPassword);
-
-// @route   POST /api/auth/reset-password
-// @desc    Reset password with oobCode
-// @access  Public
-router.post('/reset-password', resetPassword);
 
 // @route   POST /api/auth/refresh-token
 // @desc    Get new access token using refresh token

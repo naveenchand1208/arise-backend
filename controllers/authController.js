@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const { db, auth } = require('../config/firebase');
-const axios = require('axios');
 
 // Generate tokens
 const generateTokens = (uid, email) => {
@@ -14,168 +13,11 @@ const generateTokens = (uid, email) => {
   return { accessToken, refreshToken };
 };
 
-// Send OTP via MSG91
-const sendOTP = async (mobile) => {
-  try {
-    await axios.post('https://api.msg91.com/api/v5/otp', {
-      template_id: process.env.MSG91_TEMPLATE_ID,
-      mobile: `91${mobile}`,
-      authkey: process.env.MSG91_AUTH_KEY
-    });
-    return true;
-  } catch (err) {
-    console.error('MSG91 OTP error:', err.message);
-    return false;
-  }
-};
-
-// POST /api/auth/register
-const register = async (req, res) => {
-  try {
-    const { name, email, password, mobile } = req.body;
-
-    if (!name || !email || !password) {
-      return res.status(400).json({ success: false, message: 'Name, email and password required' });
-    }
-
-    if (password.length < 8) {
-      return res.status(400).json({ success: false, message: 'Password must be at least 8 characters' });
-    }
-
-    // Check if email exists
-    const existing = await db.collection('users').where('email', '==', email.toLowerCase()).get();
-    if (!existing.empty) {
-      return res.status(409).json({ success: false, message: 'Email already registered' });
-    }
-
-    // Create Firebase Auth user
-    const firebaseUser = await auth.createUser({
-      email: email.toLowerCase(),
-      password,
-      displayName: name
-    });
-
-    const hashedPassword = await bcrypt.hash(password, 12);
-
-    // Create Firestore user document
-    const now = new Date().toISOString();
-    await db.collection('users').doc(firebaseUser.uid).set({
-      uid: firebaseUser.uid,
-      name,
-      email: email.toLowerCase(),
-      mobile: mobile || null,
-      password: hashedPassword,
-      plan: 'free',
-      planExpiresAt: null,
-      beliefScore: 0,
-      currentStreak: 0,
-      longestStreak: 0,
-      loopStatus: { belief: 0, behaviour: 0, pattern: 0, result: 0 },
-      onboardingComplete: false,
-      isBlocked: false,
-      fcmTokens: [],
-      createdAt: now,
-      updatedAt: now,
-      lastActiveAt: now
-    });
-
-    const { accessToken, refreshToken } = generateTokens(firebaseUser.uid, email);
-
-    // Store refresh token
-    await db.collection('refreshTokens').add({
-      uid: firebaseUser.uid,
-      token: refreshToken,
-      createdAt: now
-    });
-
-    res.status(201).json({
-      success: true,
-      message: 'Account created successfully',
-      data: {
-        uid: firebaseUser.uid,
-        name,
-        email: email.toLowerCase(),
-        plan: 'free',
-        onboardingComplete: false,
-        accessToken,
-        refreshToken
-      }
-    });
-  } catch (err) {
-    console.error('Register error:', err);
-    if (err.code === 'auth/email-already-exists') {
-      return res.status(409).json({ success: false, message: 'Email already registered' });
-    }
-    res.status(500).json({ success: false, message: 'Registration failed' });
-  }
-};
-
-// POST /api/auth/login
-const login = async (req, res) => {
-  try {
-    const { email, password } = req.body;
-
-    if (!email || !password) {
-      return res.status(400).json({ success: false, message: 'Email and password required' });
-    }
-
-    const snapshot = await db.collection('users').where('email', '==', email.toLowerCase()).get();
-    if (snapshot.empty) {
-      return res.status(401).json({ success: false, message: 'Invalid credentials' });
-    }
-
-    const userDoc = snapshot.docs[0];
-    const userData = userDoc.data();
-
-    if (userData.isBlocked) {
-      return res.status(403).json({ success: false, message: 'Account suspended. Contact support.' });
-    }
-
-    const isMatch = await bcrypt.compare(password, userData.password);
-    if (!isMatch) {
-      return res.status(401).json({ success: false, message: 'Invalid credentials' });
-    }
-
-    // Update last active
-    await userDoc.ref.update({ lastActiveAt: new Date().toISOString() });
-
-    const { accessToken, refreshToken } = generateTokens(userData.uid, userData.email);
-
-    // Store refresh token
-    await db.collection('refreshTokens').add({
-      uid: userData.uid,
-      token: refreshToken,
-      createdAt: new Date().toISOString()
-    });
-
-    res.json({
-      success: true,
-      message: 'Login successful',
-      data: {
-        uid: userData.uid,
-        name: userData.name,
-        email: userData.email,
-        plan: userData.plan,
-        beliefScore: userData.beliefScore,
-        currentStreak: userData.currentStreak,
-        onboardingComplete: userData.onboardingComplete,
-        loopStatus: userData.loopStatus,
-        accessToken,
-        refreshToken
-      }
-    });
-  } catch (err) {
-    console.error('Login error:', err);
-    res.status(500).json({ success: false, message: 'Login failed' });
-  }
-};
-
-// POST /api/auth/social-login
+// POST /api/auth/google
+// POST /api/auth/apple
 const socialLogin = async (req, res) => {
-  console.log('slllllll')
   try {
-    const { idToken, provider } = req.body;
-    console.log(req.body)
+    const { idToken, provider, role } = req.body;
     if (!idToken) {
       return res.status(400).json({ success: false, message: 'Firebase ID token required' });
     }
@@ -187,18 +29,29 @@ const socialLogin = async (req, res) => {
       return res.status(400).json({ success: false, message: 'Only Google and Apple sign-in are supported' });
     }
 
-    if (provider && !firebaseProvider.startsWith(provider)) {
+    const requestedProvider = provider || req.params.provider;
+    if (requestedProvider && !firebaseProvider.startsWith(requestedProvider)) {
       return res.status(400).json({ success: false, message: 'Sign-in provider mismatch' });
     }
 
-    const uid = decoded.uid;
+    let uid = decoded.uid;
     const email = decoded.email?.toLowerCase();
     if (!email) {
       return res.status(400).json({ success: false, message: 'A verified email is required' });
     }
 
-    const userRef = db.collection('users').doc(uid);
-    const userDoc = await userRef.get();
+    let userRef = db.collection('users').doc(uid);
+    let userDoc = await userRef.get();
+
+    if (!userDoc.exists) {
+      const emailSnapshot = await db.collection('users').where('email', '==', email).limit(1).get();
+      if (!emailSnapshot.empty) {
+        userDoc = emailSnapshot.docs[0];
+        userRef = userDoc.ref;
+        uid = userDoc.id;
+      }
+    }
+
     const now = new Date().toISOString();
     let userData;
 
@@ -215,6 +68,7 @@ const socialLogin = async (req, res) => {
         name: userData.name || decoded.name || email.split('@')[0],
         photoURL: decoded.picture || userData.photoURL || null,
         authProvider: firebaseProvider,
+        role: userData.role || role || 'seeker',
         updatedAt: now,
         lastActiveAt: now,
       };
@@ -223,6 +77,7 @@ const socialLogin = async (req, res) => {
         name: userData.name,
         photoURL: userData.photoURL,
         authProvider: userData.authProvider,
+        role: userData.role,
         updatedAt: userData.updatedAt,
         lastActiveAt: userData.lastActiveAt,
       });
@@ -234,6 +89,7 @@ const socialLogin = async (req, res) => {
         mobile: null,
         photoURL: decoded.picture || null,
         authProvider: firebaseProvider,
+        role: role || 'seeker',
         plan: 'free',
         planId: null,
         planExpiresAt: null,
@@ -262,16 +118,21 @@ const socialLogin = async (req, res) => {
       success: true,
       message: userDoc.exists ? 'Login successful' : 'Account created successfully',
       data: {
-        uid: userData.uid,
-        name: userData.name,
-        email: userData.email,
-        photoURL: userData.photoURL || null,
-        authProvider: userData.authProvider,
-        plan: userData.plan,
-        beliefScore: userData.beliefScore,
-        currentStreak: userData.currentStreak,
-        onboardingComplete: userData.onboardingComplete,
-        loopStatus: userData.loopStatus,
+        user: {
+          id: userData.uid,
+          uid: userData.uid,
+          fullName: userData.name,
+          name: userData.name,
+          email: userData.email,
+          photoURL: userData.photoURL || null,
+          authProvider: userData.authProvider,
+          role: userData.role || 'seeker',
+          plan: userData.plan,
+          beliefScore: userData.beliefScore,
+          currentStreak: userData.currentStreak,
+          onboardingComplete: userData.onboardingComplete,
+          loopStatus: userData.loopStatus,
+        },
         accessToken,
         refreshToken,
       }
@@ -426,4 +287,4 @@ const adminLogin = async (req, res) => {
   }
 };
 
-module.exports = { register, login, socialLogin, logout, forgotPassword, resetPassword, refreshToken, adminLogin };
+module.exports = { socialLogin, logout, refreshToken, adminLogin };
