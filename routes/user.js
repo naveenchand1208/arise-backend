@@ -31,9 +31,14 @@ router.put('/priorities', verifyToken, async (req, res) => {
   try {
     const { priorities } = req.body; // ['Wealth','Health','Happiness']
     if (!Array.isArray(priorities) || priorities.length !== 3)
-      return res.status(400).json({ success: false, message: 'Exactly 3 priorities required' });
+      return res.status(400).json({ 
+       success: false, 
+       message: 'Exactly 3 priorities required' });
     await db.collection('users').doc(req.user.uid).update({ priorities, updatedAt: new Date().toISOString() });
-    res.json({ success: true, message: 'Priorities updated', data: { priorities } });
+    res.json({
+       success: true, 
+       message: 'Priorities updated', 
+       data: { priorities } });
   } catch (e) { res.status(500).json({ success: false, message: e.message }); }
 });
 

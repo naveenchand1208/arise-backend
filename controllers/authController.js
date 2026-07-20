@@ -172,8 +172,10 @@ const login = async (req, res) => {
 
 // POST /api/auth/social-login
 const socialLogin = async (req, res) => {
+  console.log('slllllll')
   try {
     const { idToken, provider } = req.body;
+    console.log(req.body)
     if (!idToken) {
       return res.status(400).json({ success: false, message: 'Firebase ID token required' });
     }
