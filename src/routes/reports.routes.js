@@ -21,11 +21,13 @@ router.get(
     const since = new Date();
     since.setDate(since.getDate() - 7);
 
-    const [morningLogs, nightLogs, tasks, journalCount] = await Promise.all([
+    const journalFilter = { userId: req.userId, date: { $gte: since } };
+    const [morningLogs, nightLogs, tasks, journalCount, journalReflections] = await Promise.all([
       RitualLog.find({ userId: req.userId, type: "morning", date: { $gte: since }, completed: true }),
       RitualLog.find({ userId: req.userId, type: "night", date: { $gte: since }, completed: true }),
       Task.find({ userId: req.userId, date: { $gte: since } }),
-      JournalEntry.countDocuments({ userId: req.userId, date: { $gte: since } }),
+      JournalEntry.countDocuments(journalFilter),
+      JournalEntry.find(journalFilter).sort({ date: -1 }).limit(5).select("type date content tag"),
     ]);
 
     return ok(res, {
@@ -34,6 +36,7 @@ router.get(
       nightProtocols: { done: nightLogs.length, total: 7 },
       tasksDone: { done: tasks.filter((t) => t.status === "done").length, total: tasks.length },
       journalEntries: journalCount,
+      journalReflections,
     });
   })
 );
@@ -45,11 +48,13 @@ router.get(
     const since = new Date();
     since.setDate(since.getDate() - 30);
 
-    const [firstScore, latestScore, morningLogs, journalCount, streak, wealthGoal] = await Promise.all([
+    const journalFilter = { userId: req.userId, date: { $gte: since } };
+    const [firstScore, latestScore, morningLogs, journalCount, journalReflections, streak, wealthGoal] = await Promise.all([
       BeliefScore.findOne({ userId: req.userId, date: { $gte: since } }).sort({ date: 1 }),
       BeliefScore.findOne({ userId: req.userId }).sort({ date: -1 }),
       RitualLog.find({ userId: req.userId, type: "morning", date: { $gte: since } }),
-      JournalEntry.countDocuments({ userId: req.userId, date: { $gte: since } }),
+      JournalEntry.countDocuments(journalFilter),
+      JournalEntry.find(journalFilter).sort({ date: -1 }).limit(8).select("type date content tag"),
       Streak.findOne({ userId: req.userId }),
       WealthGoal.findOne({ userId: req.userId }),
     ]);
@@ -70,6 +75,7 @@ router.get(
       sessionsCompleted: morningLogs.filter((l) => l.completed).length,
       meditationSeconds: streak?.totalMeditationSeconds || 0,
       journalEntries: journalCount,
+      journalReflections,
       incomeThisMonth: wealthGoal?.currentMonthReceived || 0,
     });
   })
