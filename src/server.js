@@ -11,6 +11,7 @@ import rateLimit from "express-rate-limit";
 
 import { errorHandler, notFoundHandler } from "./middleware/errorHandler.js";
 
+import adminRoutes from "./routes/admin.js"
 import authRoutes from "./routes/auth.routes.js";
 import onboardingRoutes from "./routes/onboarding.routes.js";
 import dashboardRoutes from "./routes/dashboard.routes.js";
@@ -48,6 +49,7 @@ app.get("/", (req, res) => {
 });
 
 // Routes — same paths as the Next.js version, so the Flutter app needs zero changes.
+app.use("/api/admin", adminRoutes);
 app.use("/api/auth", authLimiter, authRoutes);
 app.use("/api/onboarding", onboardingRoutes);
 app.use("/api/dashboard", dashboardRoutes);
