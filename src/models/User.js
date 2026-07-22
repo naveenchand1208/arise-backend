@@ -37,6 +37,21 @@ const UserSchema = new mongoose.Schema(
       enum: ["ceo_founder", "professional", "entrepreneur", "seeker"],
       default: "seeker",
     },
+    onboardingProfile: {
+      lifeVision: {
+        statement: { type: String, default: "" },
+        keywords: [{ type: String }],
+      },
+      paradigmDiscovery: {
+        moneyBeliefs: { type: String, default: "" },
+        successBeliefs: { type: String, default: "" },
+        inheritedScript: { type: String, default: "" },
+      },
+      patternIdentifier: {
+        patterns: [{ type: String }],
+        notes: { type: String, default: "" },
+      },
+    },
     ritualTimes: {
       morning: { type: String, default: "05:30" },
       midday: { type: String, default: "13:00" },

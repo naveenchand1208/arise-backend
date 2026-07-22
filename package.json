@@ -7,6 +7,8 @@
     "dev": "node --watch src/server.js",
     "start": "node src/server.js",
     "seed": "node scripts/seed.js",
+    "seed:validate": "node scripts/seed-validate.js",
+    "seed:export": "node scripts/export-seed-json.js",
     "seed:admin": "node scripts/seed-admin.js"
   },
   "dependencies": {

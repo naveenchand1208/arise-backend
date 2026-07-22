@@ -15,7 +15,7 @@ import Streak from "../models/Streak.js";
 import Task from "../models/Task.js";
 import RitualLog from "../models/RitualLog.js";
 import JournalEntry from "../models/JournalEntry.js";
-import { CommunityPost, Notification } from "../models/Community.js";
+import { CommunityPost, Comment, Notification } from "../models/Community.js";
 import { MasterTeacher, Asana, BreathworkTechnique, WealthAffirmation, Quote } from "../models/Content.js";
 import { Challenge, ChallengeProgress } from "../models/Challenge.js";
 import { archiveAndDeleteUser } from "../lib/archiveUser.js";
@@ -81,6 +81,28 @@ async function audit(req, action, resourceType, resourceId = "", metadata = {}) 
     resourceId: String(resourceId || ""),
     metadata,
   });
+}
+
+function communityPostPayload(post) {
+  return {
+    id: post._id,
+    author: post.authorName || post.userId?.fullName || "ARISE",
+    authorEmail: post.userId?.email || null,
+    role: post.authorRole || post.userId?.role || null,
+    isAdminPost: post.isAdminPost,
+    category: post.category,
+    content: post.content,
+    dayBadge: post.dayBadge,
+    likeCount: post.likes?.length || 0,
+    commentCount: post.commentCount || 0,
+    flagged: post.flagged,
+    reportCount: post.reportCount || 0,
+    moderationStatus: post.moderationStatus || "pending",
+    rejectionReason: post.rejectionReason,
+    createdAt: post.createdAt,
+    updatedAt: post.updatedAt,
+    moderatedAt: post.moderatedAt,
+  };
 }
 
 router.post(
@@ -205,7 +227,9 @@ router.get(
         morningProtocolCompletions: morningCompletions,
         activeChallenges,
         communityPosts,
-        pendingReports: await CommunityPost.countDocuments({ flagged: true }),
+      pendingReports: await CommunityPost.countDocuments({
+        $or: [{ flagged: true }, { moderationStatus: "pending" }, { moderationStatus: { $exists: false } }],
+      }),
         pendingAccountDeletions: pendingDeletionRequests,
         notificationsSent,
       },
@@ -426,6 +450,232 @@ router.delete(
     if (!challenge) return fail(res, "Challenge not found", 404);
     await audit(req, "challenge.archive", "challenge", challenge._id);
     return ok(res, challenge);
+  })
+);
+
+router.get(
+  "/community/posts",
+  requireAdminPermission("community:moderate"),
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { page, limit } = parsePage(req);
+    const regex = searchRegex(req.query.search);
+    const match = {};
+    if (req.query.status && req.query.status !== "all") {
+      match.$or =
+        req.query.status === "pending"
+          ? [{ moderationStatus: "pending" }, { moderationStatus: { $exists: false } }]
+          : [{ moderationStatus: req.query.status }];
+    }
+    if (req.query.category && req.query.category !== "all") match.category = req.query.category;
+    if (req.query.flagged === "true") match.flagged = true;
+    if (regex) {
+      const searchOr = [{ content: regex }, { authorName: regex }];
+      match.$and = match.$or ? [{ $or: match.$or }, { $or: searchOr }] : [{ $or: searchOr }];
+      delete match.$or;
+    }
+
+    const [items, total] = await Promise.all([
+      CommunityPost.find(match)
+        .sort({ createdAt: -1 })
+        .skip((page - 1) * limit)
+        .limit(limit)
+        .populate("userId", "fullName email role"),
+      CommunityPost.countDocuments(match),
+    ]);
+
+    return ok(res, {
+      items: items.map(communityPostPayload),
+      page,
+      limit,
+      total,
+      totalPages: Math.ceil(total / limit),
+    });
+  })
+);
+
+router.post(
+  "/community/posts",
+  requireAdminPermission("community:moderate"),
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { category, content, dayBadge, authorName, authorRole } = req.body;
+    if (!category || !content) return fail(res, "category and content are required", 400);
+
+    const post = await CommunityPost.create({
+      authorName: String(authorName || "ARISE Team").trim(),
+      authorRole: String(authorRole || "Admin").trim(),
+      isAdminPost: true,
+      category,
+      content: String(content).trim(),
+      dayBadge,
+      moderationStatus: "approved",
+      moderatedBy: req.adminId,
+      moderatedAt: new Date(),
+    });
+    await audit(req, "community.post.create", "communityPost", post._id);
+    return ok(res, communityPostPayload(post), 201);
+  })
+);
+
+router.patch(
+  "/community/posts/:id",
+  requireAdminPermission("community:moderate"),
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const allowed = ["category", "content", "dayBadge", "authorName", "authorRole", "flagged"];
+    const updates = {};
+    for (const field of allowed) {
+      if (req.body[field] !== undefined) updates[field] = req.body[field];
+    }
+
+    const post = await CommunityPost.findByIdAndUpdate(req.params.id, { $set: updates }, { new: true, runValidators: true })
+      .populate("userId", "fullName email role");
+    if (!post) return fail(res, "Community post not found", 404);
+    await audit(req, "community.post.update", "communityPost", post._id, { fields: Object.keys(updates) });
+    return ok(res, communityPostPayload(post));
+  })
+);
+
+router.post(
+  "/community/posts/:id/moderate",
+  requireAdminPermission("community:moderate"),
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { action, reason } = req.body;
+    if (!["approve", "reject", "flag"].includes(action)) return fail(res, "Unsupported moderation action", 400);
+
+    const updates = {
+      moderatedBy: req.adminId,
+      moderatedAt: new Date(),
+    };
+
+    if (action === "approve") {
+      updates.moderationStatus = "approved";
+      updates.flagged = false;
+      updates.rejectionReason = null;
+    }
+    if (action === "reject") {
+      updates.moderationStatus = "rejected";
+      updates.flagged = false;
+      updates.rejectionReason = reason || "Rejected by moderator";
+    }
+    if (action === "flag") {
+      updates.moderationStatus = "pending";
+      updates.flagged = true;
+      updates.rejectionReason = reason || null;
+    }
+
+    const post = await CommunityPost.findByIdAndUpdate(req.params.id, { $set: updates }, { new: true, runValidators: true })
+      .populate("userId", "fullName email role");
+    if (!post) return fail(res, "Community post not found", 404);
+
+    if (action === "approve") {
+      const approvedCommentCount = await Comment.countDocuments({ postId: post._id, moderationStatus: "approved", flagged: false });
+      post.commentCount = approvedCommentCount;
+      await post.save();
+    }
+
+    await audit(req, `community.post.${action}`, "communityPost", post._id, { reason });
+    return ok(res, communityPostPayload(post));
+  })
+);
+
+router.delete(
+  "/community/posts/:id",
+  requireAdminPermission("community:moderate"),
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const post = await CommunityPost.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: {
+          moderationStatus: "rejected",
+          flagged: false,
+          rejectionReason: "Removed by moderator",
+          moderatedBy: req.adminId,
+          moderatedAt: new Date(),
+        },
+      },
+      { new: true }
+    ).populate("userId", "fullName email role");
+    if (!post) return fail(res, "Community post not found", 404);
+    await audit(req, "community.post.remove", "communityPost", post._id);
+    return ok(res, communityPostPayload(post));
+  })
+);
+
+router.get(
+  "/community/comments",
+  requireAdminPermission("community:moderate"),
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { page, limit } = parsePage(req);
+    const match = {};
+    if (req.query.status && req.query.status !== "all") match.moderationStatus = req.query.status;
+    if (req.query.flagged === "true") match.flagged = true;
+
+    const [items, total] = await Promise.all([
+      Comment.find(match)
+        .sort({ createdAt: -1 })
+        .skip((page - 1) * limit)
+        .limit(limit)
+        .populate("userId", "fullName email role")
+        .populate("postId", "content category moderationStatus"),
+      Comment.countDocuments(match),
+    ]);
+
+    return ok(res, {
+      items: items.map((comment) => ({
+        id: comment._id,
+        author: comment.userId?.fullName || "Seeker",
+        authorEmail: comment.userId?.email || null,
+        content: comment.content,
+        postContent: comment.postId?.content || "",
+        postStatus: comment.postId?.moderationStatus || "",
+        flagged: comment.flagged,
+        reportCount: comment.reportCount || 0,
+        moderationStatus: comment.moderationStatus || "pending",
+        createdAt: comment.createdAt,
+      })),
+      page,
+      limit,
+      total,
+      totalPages: Math.ceil(total / limit),
+    });
+  })
+);
+
+router.post(
+  "/community/comments/:id/moderate",
+  requireAdminPermission("community:moderate"),
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { action } = req.body;
+    if (!["approve", "reject", "flag"].includes(action)) return fail(res, "Unsupported moderation action", 400);
+
+    const updates = { moderatedBy: req.adminId, moderatedAt: new Date() };
+    if (action === "approve") {
+      updates.moderationStatus = "approved";
+      updates.flagged = false;
+    }
+    if (action === "reject") {
+      updates.moderationStatus = "rejected";
+      updates.flagged = false;
+    }
+    if (action === "flag") {
+      updates.moderationStatus = "pending";
+      updates.flagged = true;
+    }
+
+    const comment = await Comment.findByIdAndUpdate(req.params.id, { $set: updates }, { new: true, runValidators: true });
+    if (!comment) return fail(res, "Comment not found", 404);
+
+    const approvedCommentCount = await Comment.countDocuments({ postId: comment.postId, moderationStatus: "approved", flagged: false });
+    await CommunityPost.findByIdAndUpdate(comment.postId, { $set: { commentCount: approvedCommentCount } });
+
+    await audit(req, `community.comment.${action}`, "comment", comment._id);
+    return ok(res, comment);
   })
 );
 

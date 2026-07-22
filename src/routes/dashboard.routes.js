@@ -5,32 +5,28 @@ import Streak from "../models/Streak.js";
 import BeliefScore from "../models/BeliefScore.js";
 import RitualLog from "../models/RitualLog.js";
 import Task from "../models/Task.js";
+import { calculateLoopEngine, startOfLocalDay } from "../services/loopEngine.js";
 import { ok } from "../lib/response.js";
 import { requireAuth } from "../middleware/auth.js";
 import { asyncHandler } from "../middleware/asyncHandler.js";
 
 const router = Router();
 
-function startOfToday() {
-  const d = new Date();
-  d.setHours(0, 0, 0, 0);
-  return d;
-}
-
 router.get(
   "/",
   requireAuth,
   asyncHandler(async (req, res) => {
     await connectDB();
-    const today = startOfToday();
+    const today = startOfLocalDay();
 
-    const [user, streak, latestScore, morningLog, middayLog, tasks] = await Promise.all([
+    const [user, streak, latestScore, morningLog, middayLog, tasks, loop] = await Promise.all([
       User.findById(req.userId).select("fullName role"),
       Streak.findOne({ userId: req.userId }),
       BeliefScore.findOne({ userId: req.userId }).sort({ date: -1 }),
       RitualLog.findOne({ userId: req.userId, type: "morning", date: today }),
       RitualLog.findOne({ userId: req.userId, type: "midday", date: today }),
       Task.find({ userId: req.userId, date: today }),
+      calculateLoopEngine(req.userId, { windowDays: 30 }),
     ]);
 
     const toPct = (v) => (v ? Math.round((v / 10) * 100) : 0);
@@ -56,6 +52,11 @@ router.get(
       middayCheckin: {
         completed: !!middayLog?.completed,
         mood: middayLog?.energyMood || null,
+      },
+      loop: {
+        windowDays: loop.windowDays,
+        layers: loop.layers,
+        bottleneck: loop.bottleneck,
       },
     });
   })

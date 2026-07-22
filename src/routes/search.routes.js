@@ -5,6 +5,12 @@ import { Challenge } from "../models/Challenge.js";
 import { ok, fail } from "../lib/response.js";
 import { asyncHandler } from "../middleware/asyncHandler.js";
 import { requireAuth } from "../middleware/auth.js";
+import {
+  asanas as seedAsanas,
+  breathwork as seedBreathwork,
+  challenges as seedChallenges,
+  masters as seedMasters,
+} from "../seeds/data/systemContent.js";
 
 const router = Router();
 router.use(requireAuth);
@@ -18,38 +24,10 @@ async function ensureSearchContent() {
     Challenge.countDocuments(visible),
   ]);
 
-  if (masters === 0) {
-    await MasterTeacher.insertMany([
-      { name: "Joe Dispenza", icon: "🧠", tagline: "Neuroscience and elevated emotion", tradition: "science", exerciseCount: 0 },
-      { name: "Neville Goddard", icon: "✨", tagline: "Wish fulfilled and imagination", tradition: "mind", exerciseCount: 0 },
-    ]);
-  }
-  if (asanas === 0) {
-    await Asana.insertMany([
-      { name: "Tadasana", icon: "🌲", subtitle: "Mountain Pose - grounding", intentTags: ["ground"], breathCount: 6 },
-      { name: "Balasana", icon: "🙏", subtitle: "Child's Pose - calm clarity", intentTags: ["clarity"], breathCount: 8 },
-    ]);
-  }
-  if (breathwork === 0) {
-    await BreathworkTechnique.insertMany([
-      { name: "Box Breathing", icon: "🌊", subtitle: "4-4-4-4 calm reset", rounds: 4, breathsPerRound: 4 },
-      { name: "Power Breath", icon: "⚡", subtitle: "Activate and energize", rounds: 3, breathsPerRound: 20 },
-    ]);
-  }
-  if (challenges === 0) {
-    await Challenge.create({
-      slug: "arise-21-day-belief-reset",
-      title: "21-Day Belief Reset",
-      teacher: "ARISE",
-      lengthDays: 21,
-      status: "PUBLISHED",
-      isActive: true,
-      dailyTasks: Array.from({ length: 21 }, (_, index) => ({
-        day: index + 1,
-        prompt: "Name one belief running your day and choose one better action.",
-      })),
-    });
-  }
+  if (masters === 0) await MasterTeacher.insertMany(seedMasters);
+  if (asanas === 0) await Asana.insertMany(seedAsanas);
+  if (breathwork === 0) await BreathworkTechnique.insertMany(seedBreathwork);
+  if (challenges === 0) await Challenge.insertMany(seedChallenges);
 }
 
 router.get(
@@ -74,7 +52,7 @@ router.get(
       masters: masters.map((m) => ({ id: m._id, type: "master", icon: m.icon, title: m.name, subtitle: m.tagline })),
       asanas: asanas.map((a) => ({ id: a._id, type: "asana", icon: a.icon, title: a.name, subtitle: a.subtitle })),
       breathwork: breathwork.map((b) => ({ id: b._id, type: "breathwork", icon: b.icon, title: b.name, subtitle: b.subtitle })),
-      challenges: challenges.map((c) => ({ id: c._id, type: "challenge", icon: "🎯", title: c.title, subtitle: c.teacher })),
+      challenges: challenges.map((c) => ({ id: c._id, type: "challenge", icon: "target", title: c.title, subtitle: c.teacher })),
     });
   })
 );

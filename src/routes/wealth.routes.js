@@ -14,15 +14,31 @@ function startOfToday() {
   return d;
 }
 
+function monthKey(date = new Date()) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
+}
+
+async function findOrCreateGoal(userId) {
+  let goal = await WealthGoal.findOne({ userId });
+  if (!goal) {
+    goal = await WealthGoal.create({
+      userId,
+      monthlyIntentionAmount: 2500000,
+      currentMonthReceived: 0,
+      affirmationText: "Money flows to me easily, joyfully, and in ever-increasing amounts. I am a powerful receiving vessel.",
+      updatedForMonth: monthKey(),
+    });
+  }
+  return goal;
+}
+
 const getWealthGoal = asyncHandler(async (req, res) => {
   await connectDB();
   const today = startOfToday();
   const [goal, todayLog] = await Promise.all([
-    WealthGoal.findOne({ userId: req.userId }),
+    findOrCreateGoal(req.userId),
     WealthPracticeLog.findOne({ userId: req.userId, date: today }),
   ]);
-
-  if (!goal) return fail(res, "No wealth goal set - complete onboarding first", 404);
 
   const progressPercent = Math.min(
     100,
@@ -30,6 +46,30 @@ const getWealthGoal = asyncHandler(async (req, res) => {
   );
 
   return ok(res, { goal, progressPercent, todayPractices: todayLog || null });
+});
+
+const updateWealthGoal = asyncHandler(async (req, res) => {
+  await connectDB();
+  const { monthlyIntentionAmount, currentMonthReceived, affirmationText } = req.body;
+  const updates = {
+    updatedForMonth: monthKey(),
+    ...(monthlyIntentionAmount !== undefined && { monthlyIntentionAmount: Number(monthlyIntentionAmount) }),
+    ...(currentMonthReceived !== undefined && { currentMonthReceived: Number(currentMonthReceived) }),
+    ...(affirmationText !== undefined && { affirmationText: String(affirmationText).trim() }),
+  };
+  if (updates.monthlyIntentionAmount !== undefined && updates.monthlyIntentionAmount <= 0) {
+    return fail(res, "monthlyIntentionAmount must be greater than zero");
+  }
+  if (updates.currentMonthReceived !== undefined && updates.currentMonthReceived < 0) {
+    return fail(res, "currentMonthReceived cannot be negative");
+  }
+
+  const goal = await WealthGoal.findOneAndUpdate(
+    { userId: req.userId },
+    { $set: updates, $setOnInsert: { userId: req.userId } },
+    { upsert: true, new: true }
+  );
+  return ok(res, goal);
 });
 
 const updateWealthPractices = asyncHandler(async (req, res) => {
@@ -57,6 +97,7 @@ const updateAffirmationProgress = asyncHandler(async (req, res) => {
 
 router.get("/", getWealthGoal);
 router.get("/goal", getWealthGoal);
+router.patch("/goal", updateWealthGoal);
 router.patch("/", updateWealthPractices);
 router.patch("/practices", updateWealthPractices);
 router.post("/affirm", updateAffirmationProgress);

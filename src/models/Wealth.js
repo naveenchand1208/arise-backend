@@ -19,6 +19,9 @@ const WealthPracticeLogSchema = new mongoose.Schema(
     paradigmAffirmationDone: { type: Boolean, default: false },
     containerExpansionDone: { type: Boolean, default: false },
     affirmationsCompleted: { type: Number, default: 0 }, // out of 7 in the affirmation carousel
+    receivingWorthinessReasons: [{ type: String }],
+    receivingUseOfWealth: { type: String, default: "" },
+    moneyGratitudes: [{ type: String }],
   },
   { timestamps: true }
 );

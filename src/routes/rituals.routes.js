@@ -10,7 +10,9 @@ import { bumpStreak } from "../utils/streak.js";
 const router = Router();
 router.use(requireAuth);
 
-const DEFAULT_STEPS = ["sunlight", "body_activation", "breathwork", "mind_programming"].map((key) => ({
+const MORNING_STEP_KEYS = ["sunlight", "body_activation", "breathwork", "mind_programming", "intention_gratitude"];
+
+const DEFAULT_STEPS = MORNING_STEP_KEYS.map((key) => ({
   key,
   technique: null,
   durationSeconds: 0,
@@ -28,6 +30,19 @@ async function findOrCreateMorningLog(userId) {
   let log = await RitualLog.findOne({ userId, type: "morning", date: today });
   if (!log) {
     log = await RitualLog.create({ userId, type: "morning", date: today, steps: DEFAULT_STEPS });
+    return log;
+  }
+
+  let changed = false;
+  for (const key of MORNING_STEP_KEYS) {
+    if (!log.steps.some((step) => step.key === key)) {
+      log.steps.push({ key, technique: null, durationSeconds: 0, completedAt: null });
+      changed = true;
+    }
+  }
+  log.steps.sort((a, b) => MORNING_STEP_KEYS.indexOf(a.key) - MORNING_STEP_KEYS.indexOf(b.key));
+  if (changed) {
+    await log.save();
   }
   return log;
 }
@@ -52,11 +67,19 @@ async function completeMorningStep(userId, { stepKey, technique, durationSeconds
   return { log };
 }
 
-async function saveMiddayCheckin(userId, { energyMood }) {
+async function saveMiddayCheckin(userId, { energyMood, loopAlignment, loopReflection }) {
   const today = startOfToday();
   return RitualLog.findOneAndUpdate(
     { userId, type: "midday", date: today },
-    { $set: { energyMood, completed: true, completedAt: new Date() } },
+    {
+      $set: {
+        energyMood,
+        ...(loopAlignment !== undefined && { loopAlignment }),
+        ...(loopReflection !== undefined && { loopReflection }),
+        completed: true,
+        completedAt: new Date(),
+      },
+    },
     { new: true, upsert: true }
   );
 }

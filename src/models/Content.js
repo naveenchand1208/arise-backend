@@ -1,16 +1,28 @@
 import mongoose from "mongoose";
 
+const seedMetadataFields = {
+  slug: { type: String, unique: true, sparse: true, index: true },
+  source: { type: String, default: "" },
+  seedVersion: { type: String, default: "" },
+  systemContent: { type: Boolean, default: false, index: true },
+};
+
+const publishableFields = {
+  status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
+  isActive: { type: Boolean, default: true, index: true },
+  featured: { type: Boolean, default: false },
+  order: { type: Number, default: 0 },
+};
+
 const MasterTeacherSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true }, // "Joe Dispenza"
-    icon: { type: String, default: "🧠" },
+    name: { type: String, required: true },
+    ...seedMetadataFields,
+    icon: { type: String, default: "mind" },
     tagline: { type: String, default: "" },
     tradition: { type: String, enum: ["mind", "science", "ancient"], default: "mind" },
     exerciseCount: { type: Number, default: 0 },
-    status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
-    isActive: { type: Boolean, default: true, index: true },
-    featured: { type: Boolean, default: false },
-    order: { type: Number, default: 0 },
+    ...publishableFields,
     exercises: [
       {
         title: String,
@@ -25,32 +37,28 @@ const MasterTeacherSchema = new mongoose.Schema(
 
 const AsanaSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true }, // "Virabhadrasana I"
-    icon: { type: String, default: "🧘" },
-    subtitle: { type: String, default: "" }, // "Warrior I · 5 breaths each"
-    intentTags: [{ type: String }], // ["confidence", "ground", "open_heart", "clarity", "detox"]
-    cueText: { type: String, default: "" }, // guidance shown during active session
+    name: { type: String, required: true },
+    ...seedMetadataFields,
+    icon: { type: String, default: "asana" },
+    subtitle: { type: String, default: "" },
+    intentTags: [{ type: String }],
+    cueText: { type: String, default: "" },
     breathCount: { type: Number, default: 5 },
-    status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
-    isActive: { type: Boolean, default: true, index: true },
-    featured: { type: Boolean, default: false },
-    order: { type: Number, default: 0 },
+    ...publishableFields,
   },
   { timestamps: true }
 );
 
 const BreathworkTechniqueSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true }, // "Wim Hof — Power Breath"
-    icon: { type: String, default: "💨" },
+    name: { type: String, required: true },
+    ...seedMetadataFields,
+    icon: { type: String, default: "breath" },
     subtitle: { type: String, default: "" },
     rounds: { type: Number, default: 3 },
     breathsPerRound: { type: Number, default: 30 },
     guidanceText: { type: String, default: "" },
-    status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
-    isActive: { type: Boolean, default: true, index: true },
-    featured: { type: Boolean, default: false },
-    order: { type: Number, default: 0 },
+    ...publishableFields,
   },
   { timestamps: true }
 );
@@ -58,11 +66,10 @@ const BreathworkTechniqueSchema = new mongoose.Schema(
 const WealthAffirmationSchema = new mongoose.Schema(
   {
     text: { type: String, required: true },
-    order: { type: Number, default: 0 },
+    ...seedMetadataFields,
     category: { type: String, default: "wealth" },
-    status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
-    isActive: { type: Boolean, default: true, index: true },
-    featured: { type: Boolean, default: false },
+    tags: [{ type: String }],
+    ...publishableFields,
   },
   { timestamps: true }
 );
@@ -71,11 +78,10 @@ const QuoteSchema = new mongoose.Schema(
   {
     text: { type: String, required: true },
     author: { type: String, required: true },
-    category: { type: String, default: "general" }, // general | wealth | discipline | belief
-    status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
-    isActive: { type: Boolean, default: true, index: true },
-    featured: { type: Boolean, default: false },
-    order: { type: Number, default: 0 },
+    ...seedMetadataFields,
+    category: { type: String, default: "general" },
+    tags: [{ type: String }],
+    ...publishableFields,
   },
   { timestamps: true }
 );

@@ -15,6 +15,13 @@ const premiumMonthly = {
   currency: "INR",
 };
 
+function validateRazorpayConfig(keyId, keySecret) {
+  if (!keyId || !keySecret) return "Razorpay is not configured on the server.";
+  if (!keyId.startsWith("rzp_")) return "Razorpay key id is invalid.";
+  if (keySecret.length < 12) return "Razorpay key secret is invalid.";
+  return null;
+}
+
 function addOneMonth(date = new Date()) {
   const next = new Date(date);
   next.setMonth(next.getMonth() + 1);
@@ -210,10 +217,9 @@ router.post(
   asyncHandler(async (req, res) => {
     const keyId = process.env.RAZORPAY_KEY_ID;
     const keySecret = process.env.RAZORPAY_KEY_SECRET;
+    const configError = validateRazorpayConfig(keyId, keySecret);
 
-    if (!keyId || !keySecret) {
-      return fail(res, "Razorpay is not configured on the server.", 503);
-    }
+    if (configError) return fail(res, configError, 503);
 
     const { plan = premiumMonthly.plan } = req.body;
     if (plan !== premiumMonthly.plan) {
@@ -229,6 +235,7 @@ router.post(
       body: JSON.stringify({
         amount: premiumMonthly.amount,
         currency: premiumMonthly.currency,
+        payment_capture: 1,
         receipt: `premium_${req.userId}_${Date.now()}`,
         notes: {
           userId: req.userId,
@@ -261,9 +268,8 @@ router.post(
   "/razorpay/verify",
   asyncHandler(async (req, res) => {
     const keySecret = process.env.RAZORPAY_KEY_SECRET;
-    if (!keySecret) {
-      return fail(res, "Razorpay is not configured on the server.", 503);
-    }
+    const configError = validateRazorpayConfig(process.env.RAZORPAY_KEY_ID || "rzp_configured", keySecret);
+    if (configError) return fail(res, configError, 503);
 
     const { razorpayOrderId, razorpayPaymentId, razorpaySignature } = req.body;
     if (!razorpayOrderId || !razorpayPaymentId || !razorpaySignature) {

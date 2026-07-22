@@ -22,6 +22,8 @@ const RitualLogSchema = new mongoose.Schema(
     revisionPracticeText: { type: String, default: null }, // night
     satsScene: { type: String, default: null }, // night
     energyMood: { type: String, enum: ["tired", "low", "steady", "energized", "peak", null], default: null }, // midday
+    loopAlignment: { type: String, enum: ["old_pattern", "aligned", null], default: null }, // midday
+    loopReflection: { type: String, default: null }, // midday
     totalDurationSeconds: { type: Number, default: 0 },
     completed: { type: Boolean, default: false },
     completedAt: { type: Date, default: null },

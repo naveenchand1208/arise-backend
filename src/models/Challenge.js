@@ -7,11 +7,17 @@ const ChallengeSchema = new mongoose.Schema(
     teacher: { type: String, default: null },
     lengthDays: { type: Number, enum: [21, 66, 90], required: true },
     description: { type: String, default: "" },
+    category: { type: String, default: "identity" },
+    layer: { type: String, enum: ["BELIEF", "BEHAVIOUR", "PATTERN", "RESULT"], default: "PATTERN" },
+    difficulty: { type: String, enum: ["beginner", "intermediate"], default: "beginner" },
     dailyTasks: [{ day: Number, prompt: String }], // length === lengthDays
     status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
     isActive: { type: Boolean, default: true, index: true },
     featured: { type: Boolean, default: false },
     order: { type: Number, default: 0 },
+    source: { type: String, default: "" },
+    seedVersion: { type: String, default: "" },
+    systemContent: { type: Boolean, default: false, index: true },
   },
   { timestamps: true }
 );

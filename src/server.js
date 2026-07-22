@@ -22,6 +22,7 @@ import { beliefRouter, shadowWorkRouter, forgivenessRouter } from "./routes/beli
 import wealthRoutes from "./routes/wealth.routes.js";
 import energyRoutes from "./routes/energy.routes.js";
 import { streaksRouter, challengesRouter } from "./routes/streaksChallenges.routes.js";
+import patternRoutes from "./routes/pattern.routes.js";
 import communityRoutes from "./routes/community.routes.js";
 import libraryRoutes from "./routes/library.routes.js";
 import searchRoutes from "./routes/search.routes.js";
@@ -63,6 +64,7 @@ app.use("/api/wealth", wealthRoutes);
 app.use("/api/energy", energyRoutes);
 app.use("/api/streaks", streaksRouter);
 app.use("/api/challenges", challengesRouter);
+app.use("/api/pattern", patternRoutes);
 app.use("/api/community", communityRoutes);
 app.use("/api/library", libraryRoutes);
 app.use("/api/search", searchRoutes);

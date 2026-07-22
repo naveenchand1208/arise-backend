@@ -48,6 +48,28 @@ router.get(
 );
 
 router.post(
+  "/vision",
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { statement, keywords = [] } = req.body;
+    if (!statement || typeof statement !== "string") return fail(res, "Life vision statement is required");
+
+    const user = await User.findByIdAndUpdate(
+      req.userId,
+      {
+        "onboardingProfile.lifeVision": {
+          statement: statement.trim(),
+          keywords: Array.isArray(keywords) ? keywords.map((item) => String(item).trim()).filter(Boolean) : [],
+        },
+      },
+      { new: true }
+    ).select("onboardingProfile.lifeVision");
+
+    return ok(res, user.onboardingProfile.lifeVision);
+  })
+);
+
+router.post(
   "/priorities",
   asyncHandler(async (req, res) => {
     await connectDB();
@@ -89,6 +111,29 @@ router.post(
 );
 
 router.post(
+  "/paradigm",
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { moneyBeliefs, successBeliefs, inheritedScript } = req.body;
+    if (!moneyBeliefs || !successBeliefs) return fail(res, "Money and success beliefs are required");
+
+    const user = await User.findByIdAndUpdate(
+      req.userId,
+      {
+        "onboardingProfile.paradigmDiscovery": {
+          moneyBeliefs: String(moneyBeliefs).trim(),
+          successBeliefs: String(successBeliefs).trim(),
+          inheritedScript: String(inheritedScript || "").trim(),
+        },
+      },
+      { new: true }
+    ).select("onboardingProfile.paradigmDiscovery");
+
+    return ok(res, user.onboardingProfile.paradigmDiscovery);
+  })
+);
+
+router.post(
   "/receiving-container",
   asyncHandler(async (req, res) => {
     await connectDB();
@@ -109,6 +154,28 @@ router.post(
     );
 
     return ok(res, goal, 201);
+  })
+);
+
+router.post(
+  "/patterns",
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { patterns, notes } = req.body;
+    if (!Array.isArray(patterns) || patterns.length === 0) return fail(res, "Select at least one current pattern");
+
+    const user = await User.findByIdAndUpdate(
+      req.userId,
+      {
+        "onboardingProfile.patternIdentifier": {
+          patterns: patterns.map((item) => String(item).trim()).filter(Boolean),
+          notes: String(notes || "").trim(),
+        },
+      },
+      { new: true }
+    ).select("onboardingProfile.patternIdentifier");
+
+    return ok(res, user.onboardingProfile.patternIdentifier);
   })
 );
 

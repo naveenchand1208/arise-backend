@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { connectDB } from "../lib/mongodb.js";
 import BeliefScore from "../models/BeliefScore.js";
+import BeliefPractice from "../models/BeliefPractice.js";
 import JournalEntry from "../models/JournalEntry.js";
 import { ok, fail } from "../lib/response.js";
 import { requireAuth } from "../middleware/auth.js";
@@ -12,7 +13,17 @@ function startOfToday() {
   return d;
 }
 
-// ── /api/belief ──────────────────────────────────────────────────────
+const practiceScreens = {
+  "daily-check": { screenId: 18, title: "Daily Belief Check" },
+  "i-am": { screenId: 19, title: "I AM Builder" },
+  "paradigm-audit": { screenId: 20, title: "Paradigm Audit" },
+  "inner-child": { screenId: 22, title: "Inner Child Letter" },
+  reframe: { screenId: 23, title: "Belief Reframe Tool" },
+  fear: { screenId: 24, title: "Fear Inventory" },
+  container: { screenId: 26, title: "Container Expansion" },
+};
+
+// /api/belief
 export const beliefRouter = Router();
 beliefRouter.use(requireAuth);
 
@@ -42,7 +53,57 @@ beliefRouter.post(
   })
 );
 
-// ── /api/shadow-work ─────────────────────────────────────────────────
+beliefRouter.get(
+  "/practices",
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { practiceKey, limit } = req.query;
+    const filter = {
+      userId: req.userId,
+      ...(practiceKey && { practiceKey }),
+    };
+    const entries = await BeliefPractice.find(filter)
+      .sort({ completedAt: -1 })
+      .limit(Number(limit) || 30);
+    return ok(res, entries);
+  })
+);
+
+beliefRouter.post(
+  "/practices",
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { practiceKey, answers, content } = req.body;
+    const practice = practiceScreens[practiceKey];
+    if (!practice) return fail(res, "Valid practiceKey is required");
+
+    const normalizedAnswers = Array.isArray(answers)
+      ? answers
+          .map((item) => ({
+            prompt: String(item?.prompt || "").trim(),
+            answer: String(item?.answer || "").trim(),
+          }))
+          .filter((item) => item.prompt && item.answer)
+      : [];
+    const normalizedContent = String(content || "").trim();
+    const finalContent = normalizedContent || normalizedAnswers.map((item) => `${item.prompt}: ${item.answer}`).join("\n\n");
+    if (!finalContent) return fail(res, "content or answers are required");
+
+    const entry = await BeliefPractice.create({
+      userId: req.userId,
+      practiceKey,
+      screenId: practice.screenId,
+      title: practice.title,
+      content: finalContent,
+      answers: normalizedAnswers,
+      completedAt: new Date(),
+    });
+
+    return ok(res, entry, 201);
+  })
+);
+
+// /api/shadow-work
 export const shadowWorkRouter = Router();
 shadowWorkRouter.use(requireAuth);
 
@@ -76,7 +137,7 @@ shadowWorkRouter.get(
   })
 );
 
-// ── /api/forgiveness ─────────────────────────────────────────────────
+// /api/forgiveness
 export const forgivenessRouter = Router();
 forgivenessRouter.use(requireAuth);
 

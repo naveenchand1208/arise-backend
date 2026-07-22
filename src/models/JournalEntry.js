@@ -5,7 +5,7 @@ const JournalEntrySchema = new mongoose.Schema(
     userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true, index: true },
     type: {
       type: String,
-      enum: ["daily", "weekly", "monthly", "shadow", "forgiveness"],
+      enum: ["daily", "weekly", "monthly", "shadow", "forgiveness", "revision"],
       required: true,
     },
     date: { type: Date, required: true },
@@ -19,6 +19,10 @@ const JournalEntrySchema = new mongoose.Schema(
     forgivenessTarget: { type: String, default: null },
     releaseStatement: { type: String, default: null },
     lessonLearned: { type: String, default: null },
+    // revision-practice specific
+    originalEvent: { type: String, default: null },
+    revisedScene: { type: String, default: null },
+    feltSense: { type: String, default: null },
   },
   { timestamps: true }
 );
