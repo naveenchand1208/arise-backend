@@ -11,6 +11,33 @@ import { asyncHandler } from "../middleware/asyncHandler.js";
 const router = Router();
 router.use(requireAuth);
 
+const VALID_ROLES = new Set(["ceo_founder", "professional", "entrepreneur", "seeker"]);
+
+router.post(
+  "/role",
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { role } = req.body;
+    if (!VALID_ROLES.has(role)) {
+      return fail(res, "Select a valid role");
+    }
+
+    const user = await User.findByIdAndUpdate(req.userId, { role }, { new: true }).select(
+      "_id fullName email phoneNumber role onboardingComplete"
+    );
+    if (!user) return fail(res, "User not found", 404);
+
+    return ok(res, {
+      id: user._id,
+      fullName: user.fullName,
+      email: user.email,
+      phoneNumber: user.phoneNumber,
+      role: user.role,
+      onboardingComplete: user.onboardingComplete,
+    });
+  })
+);
+
 router.get(
   "/priorities",
   asyncHandler(async (req, res) => {
@@ -99,6 +126,27 @@ router.post(
     );
 
     return ok(res, { ritualTimes: user.ritualTimes, onboardingComplete: user.onboardingComplete });
+  })
+);
+
+router.post(
+  "/complete",
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const user = await User.findByIdAndUpdate(req.userId, { onboardingComplete: true }, { new: true }).select(
+      "_id fullName email phoneNumber role onboardingComplete ritualTimes"
+    );
+    if (!user) return fail(res, "User not found", 404);
+
+    return ok(res, {
+      id: user._id,
+      fullName: user.fullName,
+      email: user.email,
+      phoneNumber: user.phoneNumber,
+      role: user.role,
+      onboardingComplete: user.onboardingComplete,
+      ritualTimes: user.ritualTimes,
+    });
   })
 );
 
