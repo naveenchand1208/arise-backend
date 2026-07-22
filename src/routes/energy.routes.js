@@ -14,28 +14,28 @@ function startOfToday() {
   return d;
 }
 
-router.get(
-  "/shield",
-  asyncHandler(async (req, res) => {
-    await connectDB();
-    const log = await EnergyLog.findOne({ userId: req.userId, date: startOfToday() });
-    return ok(res, log);
-  })
-);
+const getTodayEnergy = asyncHandler(async (req, res) => {
+  await connectDB();
+  const log = await EnergyLog.findOne({ userId: req.userId, date: startOfToday() });
+  return ok(res, log);
+});
 
-router.patch(
-  "/shield",
-  asyncHandler(async (req, res) => {
-    await connectDB();
-    const today = startOfToday();
-    const log = await EnergyLog.findOneAndUpdate(
-      { userId: req.userId, date: today },
-      { userId: req.userId, date: today, ...req.body },
-      { upsert: true, new: true }
-    );
-    return ok(res, log);
-  })
-);
+router.get("/shield", getTodayEnergy);
+router.get("/today", getTodayEnergy);
+
+const updateTodayEnergy = asyncHandler(async (req, res) => {
+  await connectDB();
+  const today = startOfToday();
+  const log = await EnergyLog.findOneAndUpdate(
+    { userId: req.userId, date: today },
+    { userId: req.userId, date: today, ...req.body },
+    { upsert: true, new: true }
+  );
+  return ok(res, log);
+});
+
+router.patch("/shield", updateTodayEnergy);
+router.patch("/practices", updateTodayEnergy);
 
 router.post(
   "/audit",

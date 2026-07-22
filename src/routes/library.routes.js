@@ -50,19 +50,19 @@ function dayOfYear(date) {
   return Math.floor((date - start) / (1000 * 60 * 60 * 24));
 }
 
-router.get(
-  "/quotes/daily",
-  asyncHandler(async (req, res) => {
-    await connectDB();
-    const { category } = req.query;
-    const filter = category ? { ...publicContentFilter, category } : publicContentFilter;
-    const quotes = await Quote.find(filter).sort({ order: 1, _id: 1 });
-    if (quotes.length === 0) return fail(res, "No quotes in the library yet", 404);
+const dailyQuoteHandler = asyncHandler(async (req, res) => {
+  await connectDB();
+  const { category } = req.query;
+  const filter = category ? { ...publicContentFilter, category } : publicContentFilter;
+  const quotes = await Quote.find(filter).sort({ order: 1, _id: 1 });
+  if (quotes.length === 0) return fail(res, "No quotes in the library yet", 404);
 
-    const index = dayOfYear(new Date()) % quotes.length;
-    const quote = quotes[index];
-    return ok(res, { text: quote.text, author: quote.author, category: quote.category });
-  })
-);
+  const index = dayOfYear(new Date()) % quotes.length;
+  const quote = quotes[index];
+  return ok(res, { text: quote.text, author: quote.author, category: quote.category });
+});
+
+router.get("/quotes/daily", dailyQuoteHandler);
+router.get("/daily-quote", dailyQuoteHandler);
 
 export default router;
