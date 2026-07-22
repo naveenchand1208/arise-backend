@@ -11,6 +11,7 @@ npm install
 cp .env.example .env      # fill in MONGODB_URI and JWT secrets
 npm run seed                # populates Master Library, Asana/Breathwork libraries,
                              # wealth affirmations, quotes, and Challenges
+npm run seed:admin          # creates/updates the admin panel login in MongoDB
 npm run dev                  # http://localhost:3000, auto-restarts on file change
 # or: npm start              # production mode, no auto-restart
 ```
@@ -30,6 +31,14 @@ Payment environment:
 - `REVENUECAT_WEBHOOK_AUTH` must match the exact Authorization header configured
   in RevenueCat. Point RevenueCat to
   `POST /api/subscription/revenuecat/webhook`.
+
+Admin panel login:
+
+- `ADMIN_EMAIL` and `ADMIN_PASSWORD` are used only by `npm run seed:admin` to
+  create/update the MongoDB `Admin` document.
+- The admin panel login itself always validates against the database through
+  `POST /api/admin/auth/login`.
+- `ADMIN_PASSWORD` must be at least 12 characters.
 
 ## Architecture
 
