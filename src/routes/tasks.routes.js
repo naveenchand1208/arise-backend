@@ -60,6 +60,21 @@ router.patch(
   })
 );
 
+router.patch(
+  "/:id/status",
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { status } = req.body;
+    const task = await Task.findOneAndUpdate(
+      { _id: req.params.id, userId: req.userId },
+      { status, ...(status === "done" && { completedAt: new Date() }) },
+      { new: true }
+    );
+    if (!task) return fail(res, "Task not found", 404);
+    return ok(res, task);
+  })
+);
+
 router.delete(
   "/:id",
   asyncHandler(async (req, res) => {

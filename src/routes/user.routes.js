@@ -1,15 +1,64 @@
 import { Router } from "express";
+import crypto from "crypto";
 import { connectDB } from "../lib/mongodb.js";
 import User from "../models/User.js";
 import Streak from "../models/Streak.js";
 import BeliefScore from "../models/BeliefScore.js";
 import { Notification } from "../models/Community.js";
-import { ok } from "../lib/response.js";
+import DeleteAccountRequest from "../models/deleteAccountRequest.js";
+import { fail, ok } from "../lib/response.js";
 import { requireAuth } from "../middleware/auth.js";
 import { asyncHandler } from "../middleware/asyncHandler.js";
 
 const router = Router();
 router.use(requireAuth);
+
+function createDeleteRequestId() {
+  return `dar_${Date.now()}_${crypto.randomBytes(6).toString("hex")}`;
+}
+
+async function requestAccountDeletion(req, res) {
+  await connectDB();
+
+  const user = await User.findById(req.userId).select("fullName email phone");
+  if (!user) {
+    return fail(res, "User not found.", 404);
+  }
+
+  const existingRequest = await DeleteAccountRequest.findOne({
+    userId: req.userId,
+    status: "Pending",
+  }).lean();
+
+  if (existingRequest) {
+    return ok(res, {
+      requested: true,
+      duplicate: true,
+      request: existingRequest,
+    });
+  }
+
+  const request = await DeleteAccountRequest.create({
+    id: createDeleteRequestId(),
+    userId: req.userId,
+    name: user.fullName,
+    email: user.email,
+    phone: user.phone || "",
+    reason: req.body?.reason || "",
+    otherReason: req.body?.otherReason || "",
+    status: "Pending",
+  });
+
+  return ok(
+    res,
+    {
+      requested: true,
+      duplicate: false,
+      request,
+    },
+    201
+  );
+}
 
 router.get(
   "/profile",
@@ -38,6 +87,33 @@ router.get(
 );
 
 router.patch(
+  "/profile",
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const { fullName, phoneNumber, role } = req.body;
+    const updates = {};
+
+    if (fullName !== undefined) {
+      const name = String(fullName).trim();
+      if (!name) return fail(res, "Full name is required.", 400);
+      updates.fullName = name;
+    }
+
+    if (phoneNumber !== undefined) updates.phoneNumber = String(phoneNumber).trim();
+    if (role !== undefined) {
+      const allowedRoles = ["ceo_founder", "professional", "entrepreneur", "seeker"];
+      if (!allowedRoles.includes(role)) return fail(res, "Invalid role.", 400);
+      updates.role = role;
+    }
+
+    const user = await User.findByIdAndUpdate(req.userId, { $set: updates }, { new: true });
+    if (!user) return fail(res, "User not found.", 404);
+
+    return ok(res, user);
+  })
+);
+
+router.patch(
   "/settings",
   asyncHandler(async (req, res) => {
     await connectDB();
@@ -50,15 +126,17 @@ router.patch(
 
 router.delete(
   "/settings",
-  asyncHandler(async (req, res) => {
-    // "Delete All Data" — irreversible, requires confirmation on the client.
-    await connectDB();
-    await User.findByIdAndDelete(req.userId);
-    // NOTE: in production, cascade-delete all related collections (Task, JournalEntry,
-    // BeliefScore, RitualLog, Streak, WealthGoal, EnergyLog, ChallengeProgress, CommunityPost)
-    // via a transaction or background job here.
-    return ok(res, { deleted: true });
-  })
+  asyncHandler(requestAccountDeletion)
+);
+
+router.post(
+  "/delete-account-request",
+  asyncHandler(requestAccountDeletion)
+);
+
+router.post(
+  "/delete-account-requests",
+  asyncHandler(requestAccountDeletion)
 );
 
 router.get(

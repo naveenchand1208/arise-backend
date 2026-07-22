@@ -32,3 +32,9 @@ export function verifyPassword(password, storedPassword) {
     crypto.timingSafeEqual(storedKey, derivedKey)
   );
 }
+
+export function hashPassword(password) {
+  const salt = crypto.randomBytes(16).toString("hex");
+  const derivedKey = crypto.scryptSync(String(password), salt, 64);
+  return `scrypt$${salt}$${derivedKey.toString("hex")}`;
+}

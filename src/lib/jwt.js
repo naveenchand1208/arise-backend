@@ -23,9 +23,7 @@ export function signRefreshToken(userId) {
 export function verifyAccessToken(token) {
   try {
     return jwt.verify(token, process.env.JWT_ACCESS_SECRET);
-  } catch (err) {
-    console.log("JWT ERROR:", err);
-    console.log("JWT MESSAGE:", err.message);
+  } catch {
     return null;
   }
 }

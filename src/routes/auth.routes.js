@@ -6,6 +6,7 @@ import Streak from "../models/Streak.js";
 import { signAccessToken, signRefreshToken, verifyRefreshToken } from "../lib/jwt.js";
 import { ok, fail } from "../lib/response.js";
 import { asyncHandler } from "../middleware/asyncHandler.js";
+import { requireAuth } from "../middleware/auth.js";
 
 const router = Router();
 const firebaseProjectId = process.env.FIREBASE_PROJECT_ID || "arise-f74c0";
@@ -143,6 +144,17 @@ router.post(
     const newRefreshToken = signRefreshToken(payload.sub);
 
     return ok(res, { accessToken, refreshToken: newRefreshToken });
+  })
+);
+
+router.get(
+  "/me",
+  requireAuth,
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const user = await User.findById(req.userId);
+    if (!user) return fail(res, "User not found", 404);
+    return ok(res, { user: userPayload(user) });
   })
 );
 

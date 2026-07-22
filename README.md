@@ -20,6 +20,17 @@ Generate strong JWT secrets:
 node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
 ```
 
+Payment environment:
+
+- `RAZORPAY_KEY_ID` and `RAZORPAY_KEY_SECRET` are used by the Android Razorpay
+  flow.
+- `REVENUECAT_ENTITLEMENT_ID` defaults to `premium`.
+- `REVENUECAT_SECRET_API_KEY` lets the backend verify iOS purchases against the
+  RevenueCat REST API after an in-app purchase.
+- `REVENUECAT_WEBHOOK_AUTH` must match the exact Authorization header configured
+  in RevenueCat. Point RevenueCat to
+  `POST /api/subscription/revenuecat/webhook`.
+
 ## Architecture
 
 - **Entry point:** `src/server.js` — Express app, middleware, route mounting, in that order.
@@ -51,9 +62,7 @@ the original Next.js version 1:1.
 
 1. **Push notifications** — `Notification` documents are created but nothing sends
    FCM pushes yet.
-2. **Subscription webhooks** — `/api/subscription` PATCH is a stub. Wire it to
-   RevenueCat/Stripe webhook verification instead of trusting client input.
-3. **Cascade delete** on `DELETE /api/user/settings` (account deletion) — only
+2. **Cascade delete** on `DELETE /api/user/settings` (account deletion) — only
    deletes the User document currently; related collections are listed as a TODO
    in that file.
 

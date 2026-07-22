@@ -8,33 +8,40 @@ import { asyncHandler } from "../middleware/asyncHandler.js";
 const router = Router();
 router.use(requireAuth);
 
+async function listPosts(req, res) {
+  await connectDB();
+  const { category, limit } = req.query;
+  const filter = { flagged: false, ...(category && { category }) };
+  const posts = await CommunityPost.find(filter)
+    .sort({ createdAt: -1 })
+    .limit(Number(limit) || 20)
+    .populate("userId", "fullName role");
+
+  return ok(
+    res,
+    posts.map((p) => ({
+      id: p._id,
+      author: p.userId?.fullName || "Seeker",
+      role: p.userId?.role,
+      category: p.category,
+      content: p.content,
+      dayBadge: p.dayBadge,
+      likeCount: p.likes.length,
+      likedByMe: p.likes.some((id) => id.toString() === req.userId),
+      commentCount: p.commentCount,
+      createdAt: p.createdAt,
+    }))
+  );
+}
+
 router.get(
   "/posts",
-  asyncHandler(async (req, res) => {
-    await connectDB();
-    const { category, limit } = req.query;
-    const filter = { flagged: false, ...(category && { category }) };
-    const posts = await CommunityPost.find(filter)
-      .sort({ createdAt: -1 })
-      .limit(Number(limit) || 20)
-      .populate("userId", "fullName role");
+  asyncHandler(listPosts)
+);
 
-    return ok(
-      res,
-      posts.map((p) => ({
-        id: p._id,
-        author: p.userId?.fullName || "Seeker",
-        role: p.userId?.role,
-        category: p.category,
-        content: p.content,
-        dayBadge: p.dayBadge,
-        likeCount: p.likes.length,
-        likedByMe: p.likes.some((id) => id.toString() === req.userId),
-        commentCount: p.commentCount,
-        createdAt: p.createdAt,
-      }))
-    );
-  })
+router.get(
+  "/feed",
+  asyncHandler(listPosts)
 );
 
 router.post(

@@ -5,12 +5,13 @@ import { ok, fail } from "../lib/response.js";
 import { asyncHandler } from "../middleware/asyncHandler.js";
 
 const router = Router();
+const publicContentFilter = { status: "PUBLISHED", isActive: true };
 
 router.get(
   "/masters",
   asyncHandler(async (req, res) => {
     await connectDB();
-    const teachers = await MasterTeacher.find().sort({ name: 1 });
+    const teachers = await MasterTeacher.find(publicContentFilter).sort({ order: 1, name: 1 });
     return ok(res, teachers);
   })
 );
@@ -20,8 +21,8 @@ router.get(
   asyncHandler(async (req, res) => {
     await connectDB();
     const { intent } = req.query;
-    const filter = intent ? { intentTags: intent } : {};
-    const asanas = await Asana.find(filter).sort({ name: 1 });
+    const filter = intent ? { ...publicContentFilter, intentTags: intent } : publicContentFilter;
+    const asanas = await Asana.find(filter).sort({ order: 1, name: 1 });
     return ok(res, asanas);
   })
 );
@@ -30,7 +31,7 @@ router.get(
   "/breathwork",
   asyncHandler(async (req, res) => {
     await connectDB();
-    const techniques = await BreathworkTechnique.find().sort({ name: 1 });
+    const techniques = await BreathworkTechnique.find(publicContentFilter).sort({ order: 1, name: 1 });
     return ok(res, techniques);
   })
 );
@@ -39,7 +40,7 @@ router.get(
   "/affirmations",
   asyncHandler(async (req, res) => {
     await connectDB();
-    const affirmations = await WealthAffirmation.find().sort({ order: 1 });
+    const affirmations = await WealthAffirmation.find(publicContentFilter).sort({ order: 1 });
     return ok(res, affirmations.map((a) => a.text));
   })
 );
@@ -54,8 +55,8 @@ router.get(
   asyncHandler(async (req, res) => {
     await connectDB();
     const { category } = req.query;
-    const filter = category ? { category } : {};
-    const quotes = await Quote.find(filter).sort({ _id: 1 });
+    const filter = category ? { ...publicContentFilter, category } : publicContentFilter;
+    const quotes = await Quote.find(filter).sort({ order: 1, _id: 1 });
     if (quotes.length === 0) return fail(res, "No quotes in the library yet", 404);
 
     const index = dayOfYear(new Date()) % quotes.length;

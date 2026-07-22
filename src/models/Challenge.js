@@ -8,6 +8,10 @@ const ChallengeSchema = new mongoose.Schema(
     lengthDays: { type: Number, enum: [21, 66, 90], required: true },
     description: { type: String, default: "" },
     dailyTasks: [{ day: Number, prompt: String }], // length === lengthDays
+    status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
+    isActive: { type: Boolean, default: true, index: true },
+    featured: { type: Boolean, default: false },
+    order: { type: Number, default: 0 },
   },
   { timestamps: true }
 );
@@ -19,6 +23,7 @@ const ChallengeProgressSchema = new mongoose.Schema(
     startedAt: { type: Date, default: Date.now },
     currentDay: { type: Number, default: 1 },
     completedDays: [{ type: Number }],
+    lastCompletedAt: { type: Date, default: null },
     status: { type: String, enum: ["active", "completed", "abandoned"], default: "active" },
   },
   { timestamps: true }

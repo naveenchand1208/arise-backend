@@ -17,12 +17,13 @@ router.get(
     if (!q) return fail(res, "q query param is required");
 
     const regex = new RegExp(q, "i");
+    const visible = { status: "PUBLISHED", isActive: true };
 
     const [masters, asanas, breathwork, challenges] = await Promise.all([
-      MasterTeacher.find({ $or: [{ name: regex }, { tagline: regex }] }).limit(10),
-      Asana.find({ $or: [{ name: regex }, { subtitle: regex }] }).limit(10),
-      BreathworkTechnique.find({ $or: [{ name: regex }, { subtitle: regex }] }).limit(10),
-      Challenge.find({ $or: [{ title: regex }, { teacher: regex }] }).limit(10),
+      MasterTeacher.find({ ...visible, $or: [{ name: regex }, { tagline: regex }] }).limit(10),
+      Asana.find({ ...visible, $or: [{ name: regex }, { subtitle: regex }] }).limit(10),
+      BreathworkTechnique.find({ ...visible, $or: [{ name: regex }, { subtitle: regex }] }).limit(10),
+      Challenge.find({ ...visible, $or: [{ title: regex }, { teacher: regex }] }).limit(10),
     ]);
 
     return ok(res, {

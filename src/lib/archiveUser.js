@@ -1,5 +1,5 @@
 import DeletedAccount from "../models/deletedAccount.js";
-import DeleteAccountRequest from "../models/DeleteAccountRequest.js";
+import DeleteAccountRequest from "../models/deleteAccountRequest.js";
 import User from "../models/User.js"; // Change if your model name is different
 
 export async function archiveAndDeleteUser({

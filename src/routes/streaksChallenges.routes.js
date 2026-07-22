@@ -21,12 +21,17 @@ streaksRouter.get(
 export const challengesRouter = Router();
 challengesRouter.use(requireAuth);
 
+function isSameDay(a, b) {
+  if (!a || !b) return false;
+  return new Date(a).toDateString() === new Date(b).toDateString();
+}
+
 challengesRouter.get(
   "/",
   asyncHandler(async (req, res) => {
     await connectDB();
     const [challenges, progress] = await Promise.all([
-      Challenge.find(),
+      Challenge.find({ status: "PUBLISHED", isActive: true }).sort({ order: 1, title: 1 }),
       ChallengeProgress.find({ userId: req.userId }),
     ]);
     const progressByChallengeId = Object.fromEntries(progress.map((p) => [p.challengeId.toString(), p]));
@@ -55,6 +60,23 @@ challengesRouter.post(
 );
 
 challengesRouter.post(
+  "/:id/start",
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    const challenge = await Challenge.findOne({ _id: req.params.id, status: "PUBLISHED", isActive: true });
+    if (!challenge) return fail(res, "Challenge not found", 404);
+
+    const progress = await ChallengeProgress.findOneAndUpdate(
+      { userId: req.userId, challengeId: req.params.id },
+      { $setOnInsert: { userId: req.userId, challengeId: req.params.id, startedAt: new Date(), currentDay: 1, status: "active" } },
+      { upsert: true, new: true }
+    );
+
+    return ok(res, progress, 201);
+  })
+);
+
+challengesRouter.post(
   "/:id/complete-day",
   asyncHandler(async (req, res) => {
     await connectDB();
@@ -63,10 +85,13 @@ challengesRouter.post(
 
     const challenge = await Challenge.findById(req.params.id);
     if (!challenge) return fail(res, "Challenge not found", 404);
+    if (progress.status === "completed") return ok(res, progress);
+    if (isSameDay(progress.lastCompletedAt, new Date())) return ok(res, progress);
 
     if (!progress.completedDays.includes(progress.currentDay)) {
       progress.completedDays.push(progress.currentDay);
     }
+    progress.lastCompletedAt = new Date();
 
     if (progress.currentDay >= challenge.lengthDays) {
       progress.status = "completed";

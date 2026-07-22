@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 let isConnected = false;
+mongoose.set("bufferCommands", false);
 
 /**
  * Simple singleton connection appropriate for Express's single long-running
@@ -17,7 +18,17 @@ export async function connectDB() {
   const uri = process.env.MONGODB_URI;
   if (!uri) throw new Error("Please define MONGODB_URI in your .env file");
 
-  await mongoose.connect(uri);
+  const timeoutMs = Number(process.env.MONGODB_CONNECT_TIMEOUT_MS || 3000);
+  await Promise.race([
+    mongoose.connect(uri, {
+    serverSelectionTimeoutMS: Number(process.env.MONGODB_SERVER_SELECTION_TIMEOUT_MS || 3000),
+      connectTimeoutMS: timeoutMs,
+    socketTimeoutMS: Number(process.env.MONGODB_SOCKET_TIMEOUT_MS || 5000),
+    }),
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error("MongoDB connection timed out")), timeoutMs + 1000)
+    ),
+  ]);
   isConnected = true;
   console.log("MongoDB connected");
   return mongoose.connection;

@@ -7,6 +7,10 @@ const MasterTeacherSchema = new mongoose.Schema(
     tagline: { type: String, default: "" },
     tradition: { type: String, enum: ["mind", "science", "ancient"], default: "mind" },
     exerciseCount: { type: Number, default: 0 },
+    status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
+    isActive: { type: Boolean, default: true, index: true },
+    featured: { type: Boolean, default: false },
+    order: { type: Number, default: 0 },
     exercises: [
       {
         title: String,
@@ -27,6 +31,10 @@ const AsanaSchema = new mongoose.Schema(
     intentTags: [{ type: String }], // ["confidence", "ground", "open_heart", "clarity", "detox"]
     cueText: { type: String, default: "" }, // guidance shown during active session
     breathCount: { type: Number, default: 5 },
+    status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
+    isActive: { type: Boolean, default: true, index: true },
+    featured: { type: Boolean, default: false },
+    order: { type: Number, default: 0 },
   },
   { timestamps: true }
 );
@@ -39,6 +47,10 @@ const BreathworkTechniqueSchema = new mongoose.Schema(
     rounds: { type: Number, default: 3 },
     breathsPerRound: { type: Number, default: 30 },
     guidanceText: { type: String, default: "" },
+    status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
+    isActive: { type: Boolean, default: true, index: true },
+    featured: { type: Boolean, default: false },
+    order: { type: Number, default: 0 },
   },
   { timestamps: true }
 );
@@ -47,6 +59,10 @@ const WealthAffirmationSchema = new mongoose.Schema(
   {
     text: { type: String, required: true },
     order: { type: Number, default: 0 },
+    category: { type: String, default: "wealth" },
+    status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
+    isActive: { type: Boolean, default: true, index: true },
+    featured: { type: Boolean, default: false },
   },
   { timestamps: true }
 );
@@ -56,6 +72,10 @@ const QuoteSchema = new mongoose.Schema(
     text: { type: String, required: true },
     author: { type: String, required: true },
     category: { type: String, default: "general" }, // general | wealth | discipline | belief
+    status: { type: String, enum: ["DRAFT", "PUBLISHED", "ARCHIVED"], default: "PUBLISHED", index: true },
+    isActive: { type: Boolean, default: true, index: true },
+    featured: { type: Boolean, default: false },
+    order: { type: Number, default: 0 },
   },
   { timestamps: true }
 );
