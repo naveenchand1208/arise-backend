@@ -6,7 +6,6 @@ Flutter app requires zero changes to point at this instead.
 
 ## Setup
 
-```bash
 npm install
 cp .env.example .env      # fill in MONGODB_URI and JWT secrets
 npm run seed                # populates Master Library, Asana/Breathwork libraries,
