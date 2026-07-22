@@ -6,7 +6,7 @@ import jwt from "jsonwebtoken";
 // console.log("REFRESHddSECRET:", REFRESH_SECRET);
 
 export function signAccessToken(userId) {
-  return jwt.sign({ sub: userId }, process.env.JWT_ACCESS_SECRET, { expiresIn: "15m" });
+  return jwt.sign({ sub: userId }, process.env.JWT_ACCESS_SECRET, { expiresIn: "2m" });
 }
 
 export function signRefreshToken(userId) {

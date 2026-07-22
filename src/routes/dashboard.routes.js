@@ -24,11 +24,12 @@ router.get(
     await connectDB();
     const today = startOfToday();
 
-    const [user, streak, latestScore, morningLog, tasks] = await Promise.all([
+    const [user, streak, latestScore, morningLog, middayLog, tasks] = await Promise.all([
       User.findById(req.userId).select("fullName role"),
       Streak.findOne({ userId: req.userId }),
       BeliefScore.findOne({ userId: req.userId }).sort({ date: -1 }),
       RitualLog.findOne({ userId: req.userId, type: "morning", date: today }),
+      RitualLog.findOne({ userId: req.userId, type: "midday", date: today }),
       Task.find({ userId: req.userId, date: today }),
     ]);
 
@@ -51,6 +52,10 @@ router.get(
       tasks: {
         total: tasks.length,
         done: tasks.filter((t) => t.status === "done").length,
+      },
+      middayCheckin: {
+        completed: !!middayLog?.completed,
+        mood: middayLog?.energyMood || null,
       },
     });
   })
