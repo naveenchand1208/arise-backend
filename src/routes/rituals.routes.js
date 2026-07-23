@@ -1,7 +1,6 @@
 import { Router } from "express";
 import { connectDB } from "../lib/mongodb.js";
 import RitualLog from "../models/RitualLog.js";
-import Streak from "../models/Streak.js";
 import { ok, fail } from "../lib/response.js";
 import { requireAuth } from "../middleware/auth.js";
 import { asyncHandler } from "../middleware/asyncHandler.js";
@@ -84,6 +83,12 @@ async function saveMiddayCheckin(userId, { energyMood, loopAlignment, loopReflec
   );
 }
 
+async function getMiddayCheckinHistory(userId) {
+  return RitualLog.find({ userId, type: "midday", completed: true })
+    .sort({ date: -1, completedAt: -1 })
+    .limit(60);
+}
+
 // ── Morning ──────────────────────────────────────────────────────────
 router.get(
   "/morning",
@@ -126,7 +131,11 @@ router.post(
     const log = await RitualLog.findOne({ userId: req.userId, type: "morning", date: today });
     if (!log) return fail(res, "No morning session started yet", 404);
     if (log.completed) {
-      const streak = await Streak.findOne({ userId: req.userId });
+      const { streak } = await bumpStreak(req.userId, {
+        addSessions: 0,
+        addMeditationSeconds: 0,
+        completedAt: log.completedAt || new Date(),
+      });
       return ok(res, { log, streak, newlyUnlocked: [] });
     }
     if (!log.steps.length || log.steps.some((step) => !step.completedAt)) {
@@ -186,11 +195,27 @@ router.patch(
 );
 
 // ── Midday check-in ──────────────────────────────────────────────────
+router.get(
+  "/checkin",
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    return ok(res, await getMiddayCheckinHistory(req.userId));
+  })
+);
+
 router.post(
   "/checkin",
   asyncHandler(async (req, res) => {
     await connectDB();
     return ok(res, await saveMiddayCheckin(req.userId, req.body));
+  })
+);
+
+router.get(
+  "/midday-checkin",
+  asyncHandler(async (req, res) => {
+    await connectDB();
+    return ok(res, await getMiddayCheckinHistory(req.userId));
   })
 );
 
