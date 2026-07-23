@@ -35,7 +35,35 @@ import { startNotificationScheduler } from "./services/notificationScheduler.ser
 const app = express();
 
 app.use(helmet());
-app.use(cors()); // mobile apps don't need this, but a future web admin panel will
+const defaultCorsOrigins = [
+  "http://localhost:3000",
+  "http://localhost:3001",
+  "http://127.0.0.1:3000",
+  "http://127.0.0.1:3001",
+  "https://api.ariseapps.in",
+  "https://admin.ariseapps.in",
+  "https://ariseapps.in",
+  "https://www.ariseapps.in",
+];
+const allowedCorsOrigins = (process.env.CORS_ORIGINS || defaultCorsOrigins.join(","))
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+const corsOptions = {
+  origin(origin, callback) {
+    if (!origin || allowedCorsOrigins.includes(origin)) {
+      callback(null, true);
+      return;
+    }
+    callback(new Error(`CORS origin not allowed: ${origin}`));
+  },
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "x-admin-bootstrap-token"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 app.use(express.json());
 
 // Rate limit social auth routes specifically.
