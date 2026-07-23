@@ -4,6 +4,8 @@ import { connectDB } from "../lib/mongodb.js";
 import User from "../models/User.js";
 import Streak from "../models/Streak.js";
 import BeliefScore from "../models/BeliefScore.js";
+import BeliefPractice from "../models/BeliefPractice.js";
+import JournalEntry from "../models/JournalEntry.js";
 import { Notification } from "../models/Community.js";
 import DeleteAccountRequest from "../models/deleteAccountRequest.js";
 import { fail, ok } from "../lib/response.js";
@@ -64,14 +66,25 @@ router.get(
   "/profile",
   asyncHandler(async (req, res) => {
     await connectDB();
-    const [user, streak, latestScore] = await Promise.all([
+    const [user, streak, latestScore, beliefPractices, beliefReflections] = await Promise.all([
       User.findById(req.userId),
       Streak.findOne({ userId: req.userId }),
       BeliefScore.findOne({ userId: req.userId }).sort({ date: -1 }),
+      BeliefPractice.countDocuments({ userId: req.userId, status: { $ne: "draft" } }),
+      JournalEntry.countDocuments({
+        userId: req.userId,
+        type: { $in: ["shadow", "forgiveness"] },
+        status: { $ne: "draft" },
+      }),
     ]);
 
-    const avgBeliefScore = latestScore
-      ? Math.round(((latestScore.health + latestScore.wealth + latestScore.happiness) / 3) * 10) / 10
+    const beliefValues = latestScore
+      ? ["health", "wealth", "happiness", "energy", "purpose"]
+          .map((key) => Number(latestScore[key]))
+          .filter(Number.isFinite)
+      : [];
+    const avgBeliefScore = beliefValues.length
+      ? Math.round((beliefValues.reduce((sum, value) => sum + value, 0) / beliefValues.length) * 10) / 10
       : null;
 
     return ok(res, {
@@ -81,6 +94,7 @@ router.get(
         bestStreak: streak?.best || 0,
         sessions: streak?.totalSessions || 0,
         beliefScore: avgBeliefScore,
+        beliefPractices: beliefPractices + beliefReflections,
       },
     });
   })

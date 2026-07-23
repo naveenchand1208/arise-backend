@@ -26,8 +26,8 @@ async function seedAdmin() {
     throw new Error(`ADMIN_ROLE must be one of: ${ADMIN_ROLES.join(", ")}`);
   }
 
-  if (password.length < 12) {
-    throw new Error("ADMIN_PASSWORD must be at least 12 characters");
+  if (password.length < 5) {
+    throw new Error("ADMIN_PASSWORD must be at least 5 characters");
   }
 
   await connectDB();

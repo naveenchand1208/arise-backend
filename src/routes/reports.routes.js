@@ -4,6 +4,7 @@ import RitualLog from "../models/RitualLog.js";
 import Task from "../models/Task.js";
 import JournalEntry from "../models/JournalEntry.js";
 import BeliefScore from "../models/BeliefScore.js";
+import BeliefPractice from "../models/BeliefPractice.js";
 import Streak from "../models/Streak.js";
 import { WealthGoal } from "../models/Wealth.js";
 import PatternBreak from "../models/PatternBreak.js";
@@ -27,12 +28,17 @@ router.get(
     const since = daysAgo(7);
 
     const journalFilter = { userId: req.userId, date: { $gte: since } };
-    const [morningLogs, nightLogs, tasks, journalCount, journalReflections] = await Promise.all([
+    const [morningLogs, nightLogs, tasks, journalCount, journalReflections, beliefPractices] = await Promise.all([
       RitualLog.find({ userId: req.userId, type: "morning", date: { $gte: since }, completed: true }),
       RitualLog.find({ userId: req.userId, type: "night", date: { $gte: since }, completed: true }),
       Task.find({ userId: req.userId, date: { $gte: since } }),
       JournalEntry.countDocuments(journalFilter),
       JournalEntry.find(journalFilter).sort({ date: -1 }).limit(5).select("type date content tag"),
+      BeliefPractice.countDocuments({
+        userId: req.userId,
+        status: { $ne: "draft" },
+        completedAt: { $gte: since },
+      }),
     ]);
 
     return ok(res, {
@@ -42,6 +48,7 @@ router.get(
       tasksDone: { done: tasks.filter((t) => t.status === "done").length, total: tasks.length },
       journalEntries: journalCount,
       journalReflections,
+      beliefPractices,
     });
   })
 );
@@ -150,12 +157,26 @@ router.get(
           to: latest?.happiness ?? null,
           delta: delta(first?.happiness, latest?.happiness),
         },
+        energy: { from: firstScore?.energy, to: latestScore?.energy, delta: delta(firstScore?.energy, latestScore?.energy) },
+        purpose: { from: firstScore?.purpose, to: latestScore?.purpose, delta: delta(firstScore?.purpose, latestScore?.purpose) },
+        energy: {
+          from: first?.energy ?? null,
+          to: latest?.energy ?? null,
+          delta: delta(first?.energy, latest?.energy),
+        },
+        purpose: {
+          from: first?.purpose ?? null,
+          to: latest?.purpose ?? null,
+          delta: delta(first?.purpose, latest?.purpose),
+        },
       },
       points: scores.map((score) => ({
         date: score.date,
         health: score.health,
         wealth: score.wealth,
         happiness: score.happiness,
+        energy: score.energy,
+        purpose: score.purpose,
         average: averageBelief(score),
       })),
     });

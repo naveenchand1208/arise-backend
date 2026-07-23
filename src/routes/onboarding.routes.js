@@ -2,6 +2,7 @@ import { Router } from "express";
 import { connectDB } from "../lib/mongodb.js";
 import Priority from "../models/Priority.js";
 import BeliefScore from "../models/BeliefScore.js";
+import BeliefPractice from "../models/BeliefPractice.js";
 import { WealthGoal } from "../models/Wealth.js";
 import User from "../models/User.js";
 import { ok, fail } from "../lib/response.js";
@@ -92,18 +93,17 @@ router.post(
       return fail(res, "health, wealth and happiness scores are required");
     }
 
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
+    const isFirstAssessment = (await BeliefScore.countDocuments({ userId: req.userId })) === 0;
 
     const score = await BeliefScore.create({
       userId: req.userId,
-      date: today,
+      date: new Date(),
       health,
       wealth,
       happiness,
       energy,
       purpose,
-      isBaseline: true,
+      isBaseline: isFirstAssessment,
     });
 
     return ok(res, score, 201);
@@ -128,6 +128,22 @@ router.post(
       },
       { new: true }
     ).select("onboardingProfile.paradigmDiscovery");
+
+    await BeliefPractice.create({
+      userId: req.userId,
+      practiceKey: "paradigm-discovery",
+      screenId: 20,
+      title: "Paradigm Discovery",
+      content: String(moneyBeliefs).trim(),
+      status: "completed",
+      category: "wealth",
+      trigger: "Inherited beliefs about money and success",
+      repeatedThought: `${String(moneyBeliefs).trim()}\n\n${String(successBeliefs).trim()}`,
+      possibleOrigin: String(inheritedScript || "").trim() || null,
+      newChoice: "Observe this inherited script before acting from it.",
+      paradigmStatus: "active",
+      completedAt: new Date(),
+    });
 
     return ok(res, user.onboardingProfile.paradigmDiscovery);
   })

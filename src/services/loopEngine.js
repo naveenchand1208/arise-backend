@@ -24,7 +24,11 @@ export function percent(value, total) {
 
 export function averageBelief(score) {
   if (!score) return 0;
-  return Math.round((((score.health || 0) + (score.wealth || 0) + (score.happiness || 0)) / 3) * 10);
+  const values = ["health", "wealth", "happiness", "energy", "purpose"]
+    .map((key) => Number(score[key]))
+    .filter(Number.isFinite);
+  if (!values.length) return 0;
+  return Math.round((values.reduce((sum, value) => sum + value, 0) / values.length) * 10);
 }
 
 export function delta(a, b) {
@@ -72,7 +76,7 @@ export async function calculateLoopEngine(userId, { windowDays = 30 } = {}) {
       score: averageBelief(latestBelief),
       hasData: !!latestBelief,
       inputCount: latestBelief ? 1 : 0,
-      hint: "Latest Health/Wealth/Happiness belief audit average.",
+      hint: "Latest five-domain belief audit average.",
     },
     {
       key: "behaviour",

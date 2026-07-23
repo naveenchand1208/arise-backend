@@ -183,6 +183,72 @@ const dailyPromptSeeds = [
   "Return to the practice after a drift without self-criticism.",
 ];
 
+const challengeActivityCycle = [
+  {
+    title: "Belief Audit",
+    activityType: "BELIEF_AUDIT",
+    activityReference: "belief-audit",
+    completionRule: "RECORD_CREATED",
+    ctaLabel: "Start Belief Audit",
+    route: "/belief/audit",
+    estimatedMinutes: 8,
+  },
+  {
+    title: "Morning Protocol",
+    activityType: "MORNING_PROTOCOL",
+    activityReference: "morning-complete",
+    completionRule: "EVENT_COMPLETED",
+    ctaLabel: "Begin Morning Protocol",
+    route: "/rituals/morning",
+    estimatedMinutes: 15,
+  },
+  {
+    title: "Belief Work",
+    activityType: "BELIEF_WORK",
+    activityReference: "belief-work",
+    completionRule: "RECORD_CREATED",
+    ctaLabel: "Begin Belief Work",
+    route: "/belief/work",
+    estimatedMinutes: 10,
+  },
+  {
+    title: "Intentional Journal",
+    activityType: "JOURNAL",
+    activityReference: "daily-journal",
+    completionRule: "RECORD_CREATED",
+    ctaLabel: "Write Reflection",
+    route: "/journal/daily",
+    estimatedMinutes: 8,
+  },
+  {
+    title: "Pattern Break",
+    activityType: "PATTERN_BREAK",
+    activityReference: "pattern-break",
+    completionRule: "RECORD_CREATED",
+    ctaLabel: "Log a Pattern Break",
+    route: "/pattern/breaks",
+    estimatedMinutes: 5,
+  },
+  {
+    title: "Midday Alignment",
+    activityType: "MIDDAY_CHECKIN",
+    activityReference: "midday-checkin",
+    completionRule: "RECORD_CREATED",
+    ctaLabel: "Start Midday Check-in",
+    route: "/rituals/checkin",
+    estimatedMinutes: 4,
+  },
+  {
+    title: "Night Reflection",
+    activityType: "NIGHT_PROTOCOL",
+    activityReference: "night-complete",
+    completionRule: "EVENT_COMPLETED",
+    ctaLabel: "Begin Night Protocol",
+    route: "/rituals/night",
+    estimatedMinutes: 10,
+  },
+];
+
 export const challenges = challengeTemplates.map(([slug, title, lengthDays, category, layer, description], index) => ({
   ...base(slug, index + 1, { featured: index < 4 }),
   title,
@@ -192,9 +258,13 @@ export const challenges = challengeTemplates.map(([slug, title, lengthDays, cate
   category,
   layer,
   difficulty: lengthDays === 21 ? "beginner" : "intermediate",
+  version: 2,
+  seedVersion: "challenge-evidence-v2",
   dailyTasks: Array.from({ length: lengthDays }, (_, dayIndex) => ({
     day: dayIndex + 1,
+    ...challengeActivityCycle[(dayIndex + index) % challengeActivityCycle.length],
     prompt: `Day ${dayIndex + 1}: ${dailyPromptSeeds[(dayIndex + index) % dailyPromptSeeds.length]}`,
+    minimumRequirement: 1,
   })),
 }));
 

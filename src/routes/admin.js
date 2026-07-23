@@ -117,7 +117,7 @@ router.post(
 
     const { name, email, password } = req.body;
     if (!name || !email || !password) return fail(res, "name, email and password are required", 400);
-    if (String(password).length < 12) return fail(res, "Admin password must be at least 12 characters", 400);
+    if (String(password).length < 5) return fail(res, "Admin password must be at least 5 characters", 400);
 
     const admin = await Admin.create({
       name: String(name).trim(),

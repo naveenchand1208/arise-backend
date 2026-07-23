@@ -37,7 +37,7 @@ Admin panel login:
   create/update the MongoDB `Admin` document.
 - The admin panel login itself always validates against the database through
   `POST /api/admin/auth/login`.
-- `ADMIN_PASSWORD` must be at least 12 characters.
+- Default local admin credentials are `admin` / `12345`.
 
 ## Architecture
 

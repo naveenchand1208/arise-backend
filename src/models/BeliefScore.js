@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const BeliefScoreSchema = new mongoose.Schema(
   {
     userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true, index: true },
-    date: { type: Date, required: true }, // normalized to day granularity
+    date: { type: Date, required: true, default: Date.now },
     health: { type: Number, min: 0, max: 10, required: true },
     wealth: { type: Number, min: 0, max: 10, required: true },
     happiness: { type: Number, min: 0, max: 10, required: true },

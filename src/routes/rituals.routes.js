@@ -5,6 +5,8 @@ import { ok, fail } from "../lib/response.js";
 import { requireAuth } from "../middleware/auth.js";
 import { asyncHandler } from "../middleware/asyncHandler.js";
 import { bumpStreak } from "../utils/streak.js";
+import { evaluateChallengeProgress } from "../services/challengeCompletion.js";
+import { notifyStreakMilestones } from "../services/notificationEvents.service.js";
 
 const router = Router();
 router.use(requireAuth);
@@ -68,7 +70,7 @@ async function completeMorningStep(userId, { stepKey, technique, durationSeconds
 
 async function saveMiddayCheckin(userId, { energyMood, loopAlignment, loopReflection }) {
   const today = startOfToday();
-  return RitualLog.findOneAndUpdate(
+  const log = await RitualLog.findOneAndUpdate(
     { userId, type: "midday", date: today },
     {
       $set: {
@@ -81,6 +83,13 @@ async function saveMiddayCheckin(userId, { energyMood, loopAlignment, loopReflec
     },
     { new: true, upsert: true }
   );
+  await evaluateChallengeProgress({
+    userId,
+    activityType: "MIDDAY_CHECKIN",
+    activityId: log._id,
+    completedAt: log.completedAt,
+  });
+  return log;
 }
 
 async function getMiddayCheckinHistory(userId) {
@@ -131,6 +140,13 @@ router.post(
     const log = await RitualLog.findOne({ userId: req.userId, type: "morning", date: today });
     if (!log) return fail(res, "No morning session started yet", 404);
     if (log.completed) {
+      await evaluateChallengeProgress({
+        userId: req.userId,
+        activityType: "MORNING_PROTOCOL",
+        activityId: log._id,
+        completedAt: log.completedAt || log.date,
+        durationSeconds: log.totalDurationSeconds,
+      });
       const { streak } = await bumpStreak(req.userId, {
         addSessions: 0,
         addMeditationSeconds: 0,
@@ -152,6 +168,16 @@ router.post(
     const meditationStep = log.steps.find((s) => s.key === "mind_programming");
     const { streak, newlyUnlocked } = await bumpStreak(req.userId, {
       addMeditationSeconds: meditationStep?.durationSeconds || 0,
+    });
+    notifyStreakMilestones(req.userId, newlyUnlocked).catch((error) => {
+      console.error("Unable to send streak milestone notification", error);
+    });
+    await evaluateChallengeProgress({
+      userId: req.userId,
+      activityType: "MORNING_PROTOCOL",
+      activityId: log._id,
+      completedAt: log.completedAt,
+      durationSeconds: log.totalDurationSeconds,
     });
 
     return ok(res, { log, streak, newlyUnlocked });
@@ -189,6 +215,14 @@ router.patch(
       },
       { new: true, upsert: true }
     );
+    if (complete) {
+      await evaluateChallengeProgress({
+        userId: req.userId,
+        activityType: "NIGHT_PROTOCOL",
+        activityId: log._id,
+        completedAt: log.completedAt,
+      });
+    }
 
     return ok(res, log);
   })

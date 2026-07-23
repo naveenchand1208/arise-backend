@@ -4,6 +4,7 @@ import PatternBreak from "../models/PatternBreak.js";
 import { ok, fail } from "../lib/response.js";
 import { requireAuth } from "../middleware/auth.js";
 import { asyncHandler } from "../middleware/asyncHandler.js";
+import { evaluateChallengeProgress } from "../services/challengeCompletion.js";
 
 const router = Router();
 router.use(requireAuth);
@@ -38,6 +39,12 @@ router.post(
       trigger: trigger ? String(trigger).trim() : null,
       resultSignal: resultSignal ? String(resultSignal).trim() : null,
       loggedAt: new Date(),
+    });
+    await evaluateChallengeProgress({
+      userId: req.userId,
+      activityType: "PATTERN_BREAK",
+      activityId: entry._id,
+      completedAt: entry.loggedAt,
     });
 
     return ok(res, entry, 201);

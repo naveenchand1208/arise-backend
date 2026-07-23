@@ -29,6 +29,8 @@ import searchRoutes from "./routes/search.routes.js";
 import userRoutes from "./routes/user.routes.js";
 import reportsRoutes from "./routes/reports.routes.js";
 import subscriptionRoutes from "./routes/subscription.routes.js";
+import notificationsRoutes from "./routes/notifications.routes.js";
+import { startNotificationScheduler } from "./services/notificationScheduler.service.js";
 
 const app = express();
 
@@ -71,6 +73,7 @@ app.use("/api/search", searchRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/reports", reportsRoutes);
 app.use("/api/subscription", subscriptionRoutes);
+app.use("/api/notifications", notificationsRoutes);
 
 app.use(notFoundHandler);
 app.use(errorHandler); // must be registered last
@@ -78,6 +81,7 @@ app.use(errorHandler); // must be registered last
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`ARISE API listening on http://localhost:${PORT}`);
+  startNotificationScheduler();
 });
 
 export default app;

@@ -1,6 +1,6 @@
 import Streak from "../models/Streak.js";
 
-const MILESTONES = [7, 21, 66, 90];
+const MILESTONES = [3, 7, 14, 21, 30, 66, 90];
 
 function isYesterday(date, ref) {
   const d = new Date(date);
