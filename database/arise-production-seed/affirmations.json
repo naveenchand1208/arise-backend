@@ -1,0 +1,1402 @@
+[
+  {
+    "slug": "belief-affirmation-1",
+    "order": 1,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I can examine a belief without becoming it.",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "belief-affirmation-2",
+    "order": 2,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I can examine a belief without becoming it.",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "belief-affirmation-3",
+    "order": 3,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I choose thoughts that support wise action.",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "belief-affirmation-4",
+    "order": 4,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I choose thoughts that support wise action.",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "belief-affirmation-5",
+    "order": 5,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "My inner story can mature with evidence.",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "belief-affirmation-6",
+    "order": 6,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today, my inner story can mature with evidence.",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "belief-affirmation-7",
+    "order": 7,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I notice old scripts and practice a cleaner one.",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "belief-affirmation-8",
+    "order": 8,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I notice old scripts and practice a cleaner one.",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "belief-affirmation-9",
+    "order": 9,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I am allowed to update what I once assumed.",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "belief-affirmation-10",
+    "order": 10,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I am allowed to update what I once assumed.",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "health-affirmation-1",
+    "order": 21,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I make choices that respect my body today.",
+    "category": "health",
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "slug": "health-affirmation-2",
+    "order": 22,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I make choices that respect my body today.",
+    "category": "health",
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "slug": "health-affirmation-3",
+    "order": 23,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I listen to my body with patience and care.",
+    "category": "health",
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "slug": "health-affirmation-4",
+    "order": 24,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I listen to my body with patience and care.",
+    "category": "health",
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "slug": "health-affirmation-5",
+    "order": 25,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I support my energy through simple consistent actions.",
+    "category": "health",
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "slug": "health-affirmation-6",
+    "order": 26,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I support my energy through simple consistent actions.",
+    "category": "health",
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "slug": "health-affirmation-7",
+    "order": 27,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I can rest without earning it first.",
+    "category": "health",
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "slug": "health-affirmation-8",
+    "order": 28,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I can rest without earning it first.",
+    "category": "health",
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "slug": "health-affirmation-9",
+    "order": 29,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I build health through honest daily stewardship.",
+    "category": "health",
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "slug": "health-affirmation-10",
+    "order": 30,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I build health through honest daily stewardship.",
+    "category": "health",
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "slug": "wealth-affirmation-1",
+    "order": 41,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I create value with clarity and receive with steadiness.",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "wealth-affirmation-2",
+    "order": 42,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I create value with clarity and receive with steadiness.",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "wealth-affirmation-3",
+    "order": 43,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I can handle money with calm attention.",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "wealth-affirmation-4",
+    "order": 44,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I can handle money with calm attention.",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "wealth-affirmation-5",
+    "order": 45,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I practice receiving without shrinking.",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "wealth-affirmation-6",
+    "order": 46,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I practice receiving without shrinking.",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "wealth-affirmation-7",
+    "order": 47,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I let aligned action support my financial growth.",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "wealth-affirmation-8",
+    "order": 48,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I let aligned action support my financial growth.",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "wealth-affirmation-9",
+    "order": 49,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I respect money as a responsibility, not a measure of worth.",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "wealth-affirmation-10",
+    "order": 50,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I respect money as a responsibility, not a measure of worth.",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "happiness-affirmation-1",
+    "order": 61,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I make room for ordinary moments of ease.",
+    "category": "happiness",
+    "tags": [
+      "happiness"
+    ]
+  },
+  {
+    "slug": "happiness-affirmation-2",
+    "order": 62,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I make room for ordinary moments of ease.",
+    "category": "happiness",
+    "tags": [
+      "happiness"
+    ]
+  },
+  {
+    "slug": "happiness-affirmation-3",
+    "order": 63,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Joy can be simple and still be real.",
+    "category": "happiness",
+    "tags": [
+      "happiness"
+    ]
+  },
+  {
+    "slug": "happiness-affirmation-4",
+    "order": 64,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today, joy can be simple and still be real.",
+    "category": "happiness",
+    "tags": [
+      "happiness"
+    ]
+  },
+  {
+    "slug": "happiness-affirmation-5",
+    "order": 65,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I do not postpone peace until every problem is solved.",
+    "category": "happiness",
+    "tags": [
+      "happiness"
+    ]
+  },
+  {
+    "slug": "happiness-affirmation-6",
+    "order": 66,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I do not postpone peace until every problem is solved.",
+    "category": "happiness",
+    "tags": [
+      "happiness"
+    ]
+  },
+  {
+    "slug": "happiness-affirmation-7",
+    "order": 67,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I notice what is working without denying what needs care.",
+    "category": "happiness",
+    "tags": [
+      "happiness"
+    ]
+  },
+  {
+    "slug": "happiness-affirmation-8",
+    "order": 68,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I notice what is working without denying what needs care.",
+    "category": "happiness",
+    "tags": [
+      "happiness"
+    ]
+  },
+  {
+    "slug": "happiness-affirmation-9",
+    "order": 69,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I let small appreciation change the tone of my day.",
+    "category": "happiness",
+    "tags": [
+      "happiness"
+    ]
+  },
+  {
+    "slug": "happiness-affirmation-10",
+    "order": 70,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I let small appreciation change the tone of my day.",
+    "category": "happiness",
+    "tags": [
+      "happiness"
+    ]
+  },
+  {
+    "slug": "purpose-affirmation-1",
+    "order": 81,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I can serve the next step before seeing the whole path.",
+    "category": "purpose",
+    "tags": [
+      "purpose"
+    ]
+  },
+  {
+    "slug": "purpose-affirmation-2",
+    "order": 82,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I can serve the next step before seeing the whole path.",
+    "category": "purpose",
+    "tags": [
+      "purpose"
+    ]
+  },
+  {
+    "slug": "purpose-affirmation-3",
+    "order": 83,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Purpose grows through honest participation.",
+    "category": "purpose",
+    "tags": [
+      "purpose"
+    ]
+  },
+  {
+    "slug": "purpose-affirmation-4",
+    "order": 84,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today, purpose grows through honest participation.",
+    "category": "purpose",
+    "tags": [
+      "purpose"
+    ]
+  },
+  {
+    "slug": "purpose-affirmation-5",
+    "order": 85,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "My attention belongs to what matters.",
+    "category": "purpose",
+    "tags": [
+      "purpose"
+    ]
+  },
+  {
+    "slug": "purpose-affirmation-6",
+    "order": 86,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today, my attention belongs to what matters.",
+    "category": "purpose",
+    "tags": [
+      "purpose"
+    ]
+  },
+  {
+    "slug": "purpose-affirmation-7",
+    "order": 87,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I do meaningful work one clean action at a time.",
+    "category": "purpose",
+    "tags": [
+      "purpose"
+    ]
+  },
+  {
+    "slug": "purpose-affirmation-8",
+    "order": 88,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I do meaningful work one clean action at a time.",
+    "category": "purpose",
+    "tags": [
+      "purpose"
+    ]
+  },
+  {
+    "slug": "purpose-affirmation-9",
+    "order": 89,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I let contribution guide my ambition.",
+    "category": "purpose",
+    "tags": [
+      "purpose"
+    ]
+  },
+  {
+    "slug": "purpose-affirmation-10",
+    "order": 90,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I let contribution guide my ambition.",
+    "category": "purpose",
+    "tags": [
+      "purpose"
+    ]
+  },
+  {
+    "slug": "confidence-affirmation-1",
+    "order": 101,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I trust myself to learn in motion.",
+    "category": "confidence",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "slug": "confidence-affirmation-2",
+    "order": 102,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I trust myself to learn in motion.",
+    "category": "confidence",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "slug": "confidence-affirmation-3",
+    "order": 103,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I can be new at something and still be worthy.",
+    "category": "confidence",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "slug": "confidence-affirmation-4",
+    "order": 104,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I can be new at something and still be worthy.",
+    "category": "confidence",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "slug": "confidence-affirmation-5",
+    "order": 105,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I take the next brave step without performing certainty.",
+    "category": "confidence",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "slug": "confidence-affirmation-6",
+    "order": 106,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I take the next brave step without performing certainty.",
+    "category": "confidence",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "slug": "confidence-affirmation-7",
+    "order": 107,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "My confidence grows from kept promises.",
+    "category": "confidence",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "slug": "confidence-affirmation-8",
+    "order": 108,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today, my confidence grows from kept promises.",
+    "category": "confidence",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "slug": "confidence-affirmation-9",
+    "order": 109,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I can act while still feeling human.",
+    "category": "confidence",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "slug": "confidence-affirmation-10",
+    "order": 110,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I can act while still feeling human.",
+    "category": "confidence",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "slug": "leadership-affirmation-1",
+    "order": 121,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I lead with clarity before control.",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "leadership-affirmation-2",
+    "order": 122,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I lead with clarity before control.",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "leadership-affirmation-3",
+    "order": 123,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I can be direct without losing kindness.",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "leadership-affirmation-4",
+    "order": 124,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I can be direct without losing kindness.",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "leadership-affirmation-5",
+    "order": 125,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I take responsibility for the energy I bring.",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "leadership-affirmation-6",
+    "order": 126,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I take responsibility for the energy I bring.",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "leadership-affirmation-7",
+    "order": 127,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I make decisions from values, not panic.",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "leadership-affirmation-8",
+    "order": 128,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I make decisions from values, not panic.",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "leadership-affirmation-9",
+    "order": 129,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "My leadership improves when I listen well.",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "leadership-affirmation-10",
+    "order": 130,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today, my leadership improves when I listen well.",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "focus-affirmation-1",
+    "order": 141,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I return to one thing with patience.",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "focus-affirmation-2",
+    "order": 142,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I return to one thing with patience.",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "focus-affirmation-3",
+    "order": 143,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "My attention strengthens when I protect it.",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "focus-affirmation-4",
+    "order": 144,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today, my attention strengthens when I protect it.",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "focus-affirmation-5",
+    "order": 145,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I can finish what matters before chasing novelty.",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "focus-affirmation-6",
+    "order": 146,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I can finish what matters before chasing novelty.",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "focus-affirmation-7",
+    "order": 147,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I choose depth over scattered urgency.",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "focus-affirmation-8",
+    "order": 148,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I choose depth over scattered urgency.",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "focus-affirmation-9",
+    "order": 149,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I give this moment the dignity of my presence.",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "focus-affirmation-10",
+    "order": 150,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I give this moment the dignity of my presence.",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "gratitude-affirmation-1",
+    "order": 161,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I recognize support that I used to overlook.",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "gratitude-affirmation-2",
+    "order": 162,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I recognize support that I used to overlook.",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "gratitude-affirmation-3",
+    "order": 163,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Gratitude makes me more available to life.",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "gratitude-affirmation-4",
+    "order": 164,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today, gratitude makes me more available to life.",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "gratitude-affirmation-5",
+    "order": 165,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I can appreciate progress before it is complete.",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "gratitude-affirmation-6",
+    "order": 166,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I can appreciate progress before it is complete.",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "gratitude-affirmation-7",
+    "order": 167,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I receive today with open eyes.",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "gratitude-affirmation-8",
+    "order": 168,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I receive today with open eyes.",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "gratitude-affirmation-9",
+    "order": 169,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I let appreciation become action.",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "gratitude-affirmation-10",
+    "order": 170,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I let appreciation become action.",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "discipline-affirmation-1",
+    "order": 181,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I keep one promise today.",
+    "category": "discipline",
+    "tags": [
+      "discipline"
+    ]
+  },
+  {
+    "slug": "discipline-affirmation-2",
+    "order": 182,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I keep one promise today.",
+    "category": "discipline",
+    "tags": [
+      "discipline"
+    ]
+  },
+  {
+    "slug": "discipline-affirmation-3",
+    "order": 183,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I can start before motivation arrives.",
+    "category": "discipline",
+    "tags": [
+      "discipline"
+    ]
+  },
+  {
+    "slug": "discipline-affirmation-4",
+    "order": 184,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I can start before motivation arrives.",
+    "category": "discipline",
+    "tags": [
+      "discipline"
+    ]
+  },
+  {
+    "slug": "discipline-affirmation-5",
+    "order": 185,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Discipline is care for my future self.",
+    "category": "discipline",
+    "tags": [
+      "discipline"
+    ]
+  },
+  {
+    "slug": "discipline-affirmation-6",
+    "order": 186,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today, discipline is care for my future self.",
+    "category": "discipline",
+    "tags": [
+      "discipline"
+    ]
+  },
+  {
+    "slug": "discipline-affirmation-7",
+    "order": 187,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I choose the useful action over the familiar delay.",
+    "category": "discipline",
+    "tags": [
+      "discipline"
+    ]
+  },
+  {
+    "slug": "discipline-affirmation-8",
+    "order": 188,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I choose the useful action over the familiar delay.",
+    "category": "discipline",
+    "tags": [
+      "discipline"
+    ]
+  },
+  {
+    "slug": "discipline-affirmation-9",
+    "order": 189,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "I return without drama when I drift.",
+    "category": "discipline",
+    "tags": [
+      "discipline"
+    ]
+  },
+  {
+    "slug": "discipline-affirmation-10",
+    "order": 190,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "text": "Today I return without drama when I drift.",
+    "category": "discipline",
+    "tags": [
+      "discipline"
+    ]
+  }
+]

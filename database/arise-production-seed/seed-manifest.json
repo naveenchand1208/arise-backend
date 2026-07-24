@@ -1,0 +1,38 @@
+{
+  "name": "ARISE production seed package",
+  "source": "arise-production-seed",
+  "version": "1.0.0",
+  "generatedAt": "2026-07-22T07:52:24.940Z",
+  "safety": {
+    "idempotentKey": "slug",
+    "includesUserData": false,
+    "includesTransactionalData": false,
+    "updateExistingByDefault": false
+  },
+  "collections": {
+    "masters": {
+      "file": "masters.json",
+      "count": 8
+    },
+    "asanas": {
+      "file": "asanas.json",
+      "count": 16
+    },
+    "breathwork": {
+      "file": "breathwork.json",
+      "count": 10
+    },
+    "affirmations": {
+      "file": "affirmations.json",
+      "count": 100
+    },
+    "quotes": {
+      "file": "quotes.json",
+      "count": 100
+    },
+    "challenges": {
+      "file": "challenges.json",
+      "count": 12
+    }
+  }
+}

@@ -1,0 +1,306 @@
+[
+  {
+    "slug": "mountain-pose",
+    "order": 1,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "name": "Tadasana",
+    "icon": "tree",
+    "subtitle": "Standing grounding pose - 6 steady breaths",
+    "intentTags": [
+      "ground",
+      "morning"
+    ],
+    "breathCount": 6,
+    "cueText": "Stand tall, soften knees, lengthen spine, and breathe evenly."
+  },
+  {
+    "slug": "warrior-two",
+    "order": 2,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "name": "Virabhadrasana II",
+    "icon": "strength",
+    "subtitle": "Standing strength pose - 5 breaths each side",
+    "intentTags": [
+      "confidence",
+      "morning"
+    ],
+    "breathCount": 5,
+    "cueText": "Keep the front knee tracking gently and relax the shoulders."
+  },
+  {
+    "slug": "tree-pose",
+    "order": 3,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "name": "Vrksasana",
+    "icon": "balance",
+    "subtitle": "Balance practice - 5 breaths each side",
+    "intentTags": [
+      "focus",
+      "balance"
+    ],
+    "breathCount": 5,
+    "cueText": "Use a wall if helpful. Place the foot below or above the knee, not on it."
+  },
+  {
+    "slug": "childs-pose",
+    "order": 4,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "name": "Balasana",
+    "icon": "rest",
+    "subtitle": "Restorative pause - 8 slow breaths",
+    "intentTags": [
+      "calm",
+      "clarity"
+    ],
+    "breathCount": 8,
+    "cueText": "Rest the torso comfortably and stop if the knees feel strained."
+  },
+  {
+    "slug": "cat-cow",
+    "order": 5,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Marjaryasana Bitilasana",
+    "icon": "wave",
+    "subtitle": "Spinal mobility - 8 gentle rounds",
+    "intentTags": [
+      "mobility",
+      "morning"
+    ],
+    "breathCount": 8,
+    "cueText": "Move slowly with the breath and avoid forcing the range."
+  },
+  {
+    "slug": "seated-twist",
+    "order": 6,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Ardha Matsyendrasana Prep",
+    "icon": "spiral",
+    "subtitle": "Seated twist - 5 breaths each side",
+    "intentTags": [
+      "clarity",
+      "mobility"
+    ],
+    "breathCount": 5,
+    "cueText": "Lengthen before twisting and keep the breath easy."
+  },
+  {
+    "slug": "cobra-pose",
+    "order": 7,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Bhujangasana",
+    "icon": "leaf",
+    "subtitle": "Gentle backbend - 5 breaths",
+    "intentTags": [
+      "open_heart",
+      "energy"
+    ],
+    "breathCount": 5,
+    "cueText": "Keep elbows soft and stop if the lower back pinches."
+  },
+  {
+    "slug": "forward-fold",
+    "order": 8,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Uttanasana",
+    "icon": "fold",
+    "subtitle": "Release fold - 6 breaths",
+    "intentTags": [
+      "release",
+      "ground"
+    ],
+    "breathCount": 6,
+    "cueText": "Bend knees generously and let the neck relax."
+  },
+  {
+    "slug": "low-lunge",
+    "order": 9,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Anjaneyasana Prep",
+    "icon": "moon",
+    "subtitle": "Hip opening lunge - 5 breaths each side",
+    "intentTags": [
+      "mobility",
+      "energy"
+    ],
+    "breathCount": 5,
+    "cueText": "Pad the back knee and stay out of pain."
+  },
+  {
+    "slug": "chair-pose",
+    "order": 10,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Utkatasana",
+    "icon": "fire",
+    "subtitle": "Activation pose - 5 breaths",
+    "intentTags": [
+      "discipline",
+      "morning"
+    ],
+    "breathCount": 5,
+    "cueText": "Sit back lightly and keep the breath steady."
+  },
+  {
+    "slug": "bridge-pose",
+    "order": 11,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Setu Bandha Sarvangasana",
+    "icon": "bridge",
+    "subtitle": "Grounded backbend - 6 breaths",
+    "intentTags": [
+      "open_heart",
+      "restore"
+    ],
+    "breathCount": 6,
+    "cueText": "Lift gently and keep the neck neutral."
+  },
+  {
+    "slug": "legs-up-rest",
+    "order": 12,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Viparita Karani Prep",
+    "icon": "restore",
+    "subtitle": "Restorative inversion - 10 breaths",
+    "intentTags": [
+      "restore",
+      "evening"
+    ],
+    "breathCount": 10,
+    "cueText": "Use a wall or chair and come out slowly."
+  },
+  {
+    "slug": "easy-seat",
+    "order": 13,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Sukhasana",
+    "icon": "meditate",
+    "subtitle": "Meditation seat - 10 breaths",
+    "intentTags": [
+      "meditation",
+      "calm"
+    ],
+    "breathCount": 10,
+    "cueText": "Sit on support if the hips feel tight."
+  },
+  {
+    "slug": "side-stretch",
+    "order": 14,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Seated Side Stretch",
+    "icon": "side",
+    "subtitle": "Side body opening - 5 breaths each side",
+    "intentTags": [
+      "mobility",
+      "breath"
+    ],
+    "breathCount": 5,
+    "cueText": "Keep both sitting bones grounded and breathe into the ribs."
+  },
+  {
+    "slug": "downward-dog-prep",
+    "order": 15,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Adho Mukha Svanasana Prep",
+    "icon": "triangle",
+    "subtitle": "Whole body wake-up - 5 breaths",
+    "intentTags": [
+      "morning",
+      "strength"
+    ],
+    "breathCount": 5,
+    "cueText": "Bend knees and prioritize length over depth."
+  },
+  {
+    "slug": "constructive-rest",
+    "order": 16,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Constructive Rest",
+    "icon": "moon",
+    "subtitle": "Nervous-system pause - 12 breaths",
+    "intentTags": [
+      "restore",
+      "evening"
+    ],
+    "breathCount": 12,
+    "cueText": "Lie down with knees bent and let the floor support you."
+  }
+]

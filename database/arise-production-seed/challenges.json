@@ -1,0 +1,2330 @@
+[
+  {
+    "slug": "belief-awareness-21",
+    "order": 1,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "title": "21-Day Belief Awareness",
+    "teacher": "ARISE",
+    "lengthDays": 21,
+    "description": "Notice the belief underneath daily choices.",
+    "category": "belief",
+    "layer": "BELIEF",
+    "difficulty": "beginner",
+    "dailyTasks": [
+      {
+        "day": 1,
+        "prompt": "Day 1: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 2,
+        "prompt": "Day 2: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 3,
+        "prompt": "Day 3: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 4,
+        "prompt": "Day 4: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 5,
+        "prompt": "Day 5: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 6,
+        "prompt": "Day 6: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 7,
+        "prompt": "Day 7: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 8,
+        "prompt": "Day 8: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 9,
+        "prompt": "Day 9: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 10,
+        "prompt": "Day 10: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 11,
+        "prompt": "Day 11: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 12,
+        "prompt": "Day 12: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 13,
+        "prompt": "Day 13: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 14,
+        "prompt": "Day 14: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 15,
+        "prompt": "Day 15: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 16,
+        "prompt": "Day 16: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 17,
+        "prompt": "Day 17: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 18,
+        "prompt": "Day 18: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 19,
+        "prompt": "Day 19: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 20,
+        "prompt": "Day 20: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 21,
+        "prompt": "Day 21: Name the belief most active today and choose one supporting action."
+      }
+    ]
+  },
+  {
+    "slug": "morning-consistency-21",
+    "order": 2,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "title": "21-Day Morning Consistency",
+    "teacher": "ARISE",
+    "lengthDays": 21,
+    "description": "Build a reliable morning practice without perfectionism.",
+    "category": "morning",
+    "layer": "BEHAVIOUR",
+    "difficulty": "beginner",
+    "dailyTasks": [
+      {
+        "day": 1,
+        "prompt": "Day 1: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 2,
+        "prompt": "Day 2: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 3,
+        "prompt": "Day 3: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 4,
+        "prompt": "Day 4: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 5,
+        "prompt": "Day 5: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 6,
+        "prompt": "Day 6: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 7,
+        "prompt": "Day 7: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 8,
+        "prompt": "Day 8: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 9,
+        "prompt": "Day 9: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 10,
+        "prompt": "Day 10: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 11,
+        "prompt": "Day 11: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 12,
+        "prompt": "Day 12: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 13,
+        "prompt": "Day 13: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 14,
+        "prompt": "Day 14: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 15,
+        "prompt": "Day 15: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 16,
+        "prompt": "Day 16: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 17,
+        "prompt": "Day 17: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 18,
+        "prompt": "Day 18: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 19,
+        "prompt": "Day 19: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 20,
+        "prompt": "Day 20: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 21,
+        "prompt": "Day 21: Complete one small action before checking for outside approval."
+      }
+    ]
+  },
+  {
+    "slug": "intentional-action-21",
+    "order": 3,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "title": "21-Day Intentional Action",
+    "teacher": "ARISE",
+    "lengthDays": 21,
+    "description": "Turn reflection into one visible action each day.",
+    "category": "discipline",
+    "layer": "BEHAVIOUR",
+    "difficulty": "beginner",
+    "dailyTasks": [
+      {
+        "day": 1,
+        "prompt": "Day 1: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 2,
+        "prompt": "Day 2: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 3,
+        "prompt": "Day 3: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 4,
+        "prompt": "Day 4: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 5,
+        "prompt": "Day 5: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 6,
+        "prompt": "Day 6: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 7,
+        "prompt": "Day 7: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 8,
+        "prompt": "Day 8: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 9,
+        "prompt": "Day 9: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 10,
+        "prompt": "Day 10: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 11,
+        "prompt": "Day 11: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 12,
+        "prompt": "Day 12: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 13,
+        "prompt": "Day 13: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 14,
+        "prompt": "Day 14: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 15,
+        "prompt": "Day 15: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 16,
+        "prompt": "Day 16: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 17,
+        "prompt": "Day 17: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 18,
+        "prompt": "Day 18: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 19,
+        "prompt": "Day 19: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 20,
+        "prompt": "Day 20: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 21,
+        "prompt": "Day 21: Notice a repeated pattern and interrupt it with one conscious pause."
+      }
+    ]
+  },
+  {
+    "slug": "gratitude-practice-21",
+    "order": 4,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "title": "21-Day Gratitude Practice",
+    "teacher": "ARISE",
+    "lengthDays": 21,
+    "description": "Train attention toward specific appreciation.",
+    "category": "gratitude",
+    "layer": "BELIEF",
+    "difficulty": "beginner",
+    "dailyTasks": [
+      {
+        "day": 1,
+        "prompt": "Day 1: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 2,
+        "prompt": "Day 2: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 3,
+        "prompt": "Day 3: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 4,
+        "prompt": "Day 4: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 5,
+        "prompt": "Day 5: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 6,
+        "prompt": "Day 6: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 7,
+        "prompt": "Day 7: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 8,
+        "prompt": "Day 8: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 9,
+        "prompt": "Day 9: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 10,
+        "prompt": "Day 10: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 11,
+        "prompt": "Day 11: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 12,
+        "prompt": "Day 12: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 13,
+        "prompt": "Day 13: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 14,
+        "prompt": "Day 14: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 15,
+        "prompt": "Day 15: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 16,
+        "prompt": "Day 16: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 17,
+        "prompt": "Day 17: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 18,
+        "prompt": "Day 18: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 19,
+        "prompt": "Day 19: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 20,
+        "prompt": "Day 20: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 21,
+        "prompt": "Day 21: Write one piece of evidence that your identity is changing."
+      }
+    ]
+  },
+  {
+    "slug": "energy-awareness-21",
+    "order": 5,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "title": "21-Day Energy Awareness",
+    "teacher": "ARISE",
+    "lengthDays": 21,
+    "description": "Notice and protect the sources of your energy.",
+    "category": "energy",
+    "layer": "PATTERN",
+    "difficulty": "beginner",
+    "dailyTasks": [
+      {
+        "day": 1,
+        "prompt": "Day 1: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 2,
+        "prompt": "Day 2: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 3,
+        "prompt": "Day 3: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 4,
+        "prompt": "Day 4: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 5,
+        "prompt": "Day 5: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 6,
+        "prompt": "Day 6: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 7,
+        "prompt": "Day 7: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 8,
+        "prompt": "Day 8: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 9,
+        "prompt": "Day 9: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 10,
+        "prompt": "Day 10: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 11,
+        "prompt": "Day 11: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 12,
+        "prompt": "Day 12: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 13,
+        "prompt": "Day 13: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 14,
+        "prompt": "Day 14: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 15,
+        "prompt": "Day 15: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 16,
+        "prompt": "Day 16: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 17,
+        "prompt": "Day 17: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 18,
+        "prompt": "Day 18: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 19,
+        "prompt": "Day 19: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 20,
+        "prompt": "Day 20: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 21,
+        "prompt": "Day 21: Practice receiving support, appreciation, or feedback without deflecting."
+      }
+    ]
+  },
+  {
+    "slug": "digital-clarity-21",
+    "order": 6,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "title": "21-Day Digital Clarity",
+    "teacher": "ARISE",
+    "lengthDays": 21,
+    "description": "Reduce scattered attention through daily boundaries.",
+    "category": "focus",
+    "layer": "BEHAVIOUR",
+    "difficulty": "beginner",
+    "dailyTasks": [
+      {
+        "day": 1,
+        "prompt": "Day 1: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 2,
+        "prompt": "Day 2: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 3,
+        "prompt": "Day 3: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 4,
+        "prompt": "Day 4: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 5,
+        "prompt": "Day 5: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 6,
+        "prompt": "Day 6: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 7,
+        "prompt": "Day 7: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 8,
+        "prompt": "Day 8: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 9,
+        "prompt": "Day 9: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 10,
+        "prompt": "Day 10: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 11,
+        "prompt": "Day 11: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 12,
+        "prompt": "Day 12: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 13,
+        "prompt": "Day 13: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 14,
+        "prompt": "Day 14: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 15,
+        "prompt": "Day 15: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 16,
+        "prompt": "Day 16: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 17,
+        "prompt": "Day 17: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 18,
+        "prompt": "Day 18: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 19,
+        "prompt": "Day 19: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 20,
+        "prompt": "Day 20: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 21,
+        "prompt": "Day 21: Protect one block of attention from avoidable interruption."
+      }
+    ]
+  },
+  {
+    "slug": "wealth-receiving-21",
+    "order": 7,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "title": "21-Day Receiving Practice",
+    "teacher": "ARISE",
+    "lengthDays": 21,
+    "description": "Practice value, receiving, and grounded responsibility.",
+    "category": "wealth",
+    "layer": "BELIEF",
+    "difficulty": "beginner",
+    "dailyTasks": [
+      {
+        "day": 1,
+        "prompt": "Day 1: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 2,
+        "prompt": "Day 2: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 3,
+        "prompt": "Day 3: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 4,
+        "prompt": "Day 4: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 5,
+        "prompt": "Day 5: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 6,
+        "prompt": "Day 6: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 7,
+        "prompt": "Day 7: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 8,
+        "prompt": "Day 8: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 9,
+        "prompt": "Day 9: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 10,
+        "prompt": "Day 10: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 11,
+        "prompt": "Day 11: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 12,
+        "prompt": "Day 12: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 13,
+        "prompt": "Day 13: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 14,
+        "prompt": "Day 14: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 15,
+        "prompt": "Day 15: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 16,
+        "prompt": "Day 16: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 17,
+        "prompt": "Day 17: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 18,
+        "prompt": "Day 18: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 19,
+        "prompt": "Day 19: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 20,
+        "prompt": "Day 20: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 21,
+        "prompt": "Day 21: Close one open loop that has been draining energy."
+      }
+    ]
+  },
+  {
+    "slug": "identity-rewire-66",
+    "order": 8,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "title": "66-Day Identity Rewire",
+    "teacher": "ARISE",
+    "lengthDays": 66,
+    "description": "Repeat aligned actions until they feel believable.",
+    "category": "identity",
+    "layer": "PATTERN",
+    "difficulty": "intermediate",
+    "dailyTasks": [
+      {
+        "day": 1,
+        "prompt": "Day 1: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 2,
+        "prompt": "Day 2: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 3,
+        "prompt": "Day 3: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 4,
+        "prompt": "Day 4: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 5,
+        "prompt": "Day 5: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 6,
+        "prompt": "Day 6: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 7,
+        "prompt": "Day 7: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 8,
+        "prompt": "Day 8: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 9,
+        "prompt": "Day 9: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 10,
+        "prompt": "Day 10: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 11,
+        "prompt": "Day 11: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 12,
+        "prompt": "Day 12: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 13,
+        "prompt": "Day 13: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 14,
+        "prompt": "Day 14: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 15,
+        "prompt": "Day 15: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 16,
+        "prompt": "Day 16: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 17,
+        "prompt": "Day 17: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 18,
+        "prompt": "Day 18: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 19,
+        "prompt": "Day 19: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 20,
+        "prompt": "Day 20: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 21,
+        "prompt": "Day 21: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 22,
+        "prompt": "Day 22: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 23,
+        "prompt": "Day 23: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 24,
+        "prompt": "Day 24: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 25,
+        "prompt": "Day 25: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 26,
+        "prompt": "Day 26: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 27,
+        "prompt": "Day 27: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 28,
+        "prompt": "Day 28: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 29,
+        "prompt": "Day 29: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 30,
+        "prompt": "Day 30: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 31,
+        "prompt": "Day 31: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 32,
+        "prompt": "Day 32: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 33,
+        "prompt": "Day 33: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 34,
+        "prompt": "Day 34: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 35,
+        "prompt": "Day 35: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 36,
+        "prompt": "Day 36: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 37,
+        "prompt": "Day 37: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 38,
+        "prompt": "Day 38: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 39,
+        "prompt": "Day 39: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 40,
+        "prompt": "Day 40: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 41,
+        "prompt": "Day 41: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 42,
+        "prompt": "Day 42: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 43,
+        "prompt": "Day 43: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 44,
+        "prompt": "Day 44: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 45,
+        "prompt": "Day 45: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 46,
+        "prompt": "Day 46: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 47,
+        "prompt": "Day 47: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 48,
+        "prompt": "Day 48: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 49,
+        "prompt": "Day 49: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 50,
+        "prompt": "Day 50: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 51,
+        "prompt": "Day 51: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 52,
+        "prompt": "Day 52: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 53,
+        "prompt": "Day 53: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 54,
+        "prompt": "Day 54: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 55,
+        "prompt": "Day 55: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 56,
+        "prompt": "Day 56: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 57,
+        "prompt": "Day 57: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 58,
+        "prompt": "Day 58: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 59,
+        "prompt": "Day 59: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 60,
+        "prompt": "Day 60: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 61,
+        "prompt": "Day 61: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 62,
+        "prompt": "Day 62: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 63,
+        "prompt": "Day 63: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 64,
+        "prompt": "Day 64: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 65,
+        "prompt": "Day 65: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 66,
+        "prompt": "Day 66: Notice a repeated pattern and interrupt it with one conscious pause."
+      }
+    ]
+  },
+  {
+    "slug": "focus-reset-66",
+    "order": 9,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "title": "66-Day Focus Reset",
+    "teacher": "ARISE",
+    "lengthDays": 66,
+    "description": "Rebuild attention through simple daily completion.",
+    "category": "focus",
+    "layer": "PATTERN",
+    "difficulty": "intermediate",
+    "dailyTasks": [
+      {
+        "day": 1,
+        "prompt": "Day 1: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 2,
+        "prompt": "Day 2: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 3,
+        "prompt": "Day 3: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 4,
+        "prompt": "Day 4: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 5,
+        "prompt": "Day 5: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 6,
+        "prompt": "Day 6: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 7,
+        "prompt": "Day 7: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 8,
+        "prompt": "Day 8: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 9,
+        "prompt": "Day 9: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 10,
+        "prompt": "Day 10: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 11,
+        "prompt": "Day 11: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 12,
+        "prompt": "Day 12: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 13,
+        "prompt": "Day 13: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 14,
+        "prompt": "Day 14: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 15,
+        "prompt": "Day 15: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 16,
+        "prompt": "Day 16: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 17,
+        "prompt": "Day 17: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 18,
+        "prompt": "Day 18: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 19,
+        "prompt": "Day 19: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 20,
+        "prompt": "Day 20: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 21,
+        "prompt": "Day 21: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 22,
+        "prompt": "Day 22: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 23,
+        "prompt": "Day 23: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 24,
+        "prompt": "Day 24: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 25,
+        "prompt": "Day 25: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 26,
+        "prompt": "Day 26: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 27,
+        "prompt": "Day 27: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 28,
+        "prompt": "Day 28: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 29,
+        "prompt": "Day 29: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 30,
+        "prompt": "Day 30: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 31,
+        "prompt": "Day 31: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 32,
+        "prompt": "Day 32: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 33,
+        "prompt": "Day 33: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 34,
+        "prompt": "Day 34: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 35,
+        "prompt": "Day 35: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 36,
+        "prompt": "Day 36: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 37,
+        "prompt": "Day 37: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 38,
+        "prompt": "Day 38: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 39,
+        "prompt": "Day 39: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 40,
+        "prompt": "Day 40: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 41,
+        "prompt": "Day 41: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 42,
+        "prompt": "Day 42: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 43,
+        "prompt": "Day 43: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 44,
+        "prompt": "Day 44: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 45,
+        "prompt": "Day 45: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 46,
+        "prompt": "Day 46: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 47,
+        "prompt": "Day 47: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 48,
+        "prompt": "Day 48: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 49,
+        "prompt": "Day 49: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 50,
+        "prompt": "Day 50: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 51,
+        "prompt": "Day 51: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 52,
+        "prompt": "Day 52: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 53,
+        "prompt": "Day 53: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 54,
+        "prompt": "Day 54: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 55,
+        "prompt": "Day 55: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 56,
+        "prompt": "Day 56: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 57,
+        "prompt": "Day 57: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 58,
+        "prompt": "Day 58: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 59,
+        "prompt": "Day 59: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 60,
+        "prompt": "Day 60: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 61,
+        "prompt": "Day 61: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 62,
+        "prompt": "Day 62: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 63,
+        "prompt": "Day 63: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 64,
+        "prompt": "Day 64: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 65,
+        "prompt": "Day 65: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 66,
+        "prompt": "Day 66: Write one piece of evidence that your identity is changing."
+      }
+    ]
+  },
+  {
+    "slug": "leadership-presence-66",
+    "order": 10,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "title": "66-Day Leadership Presence",
+    "teacher": "ARISE",
+    "lengthDays": 66,
+    "description": "Practice calm, clear leadership in ordinary moments.",
+    "category": "leadership",
+    "layer": "PATTERN",
+    "difficulty": "intermediate",
+    "dailyTasks": [
+      {
+        "day": 1,
+        "prompt": "Day 1: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 2,
+        "prompt": "Day 2: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 3,
+        "prompt": "Day 3: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 4,
+        "prompt": "Day 4: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 5,
+        "prompt": "Day 5: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 6,
+        "prompt": "Day 6: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 7,
+        "prompt": "Day 7: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 8,
+        "prompt": "Day 8: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 9,
+        "prompt": "Day 9: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 10,
+        "prompt": "Day 10: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 11,
+        "prompt": "Day 11: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 12,
+        "prompt": "Day 12: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 13,
+        "prompt": "Day 13: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 14,
+        "prompt": "Day 14: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 15,
+        "prompt": "Day 15: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 16,
+        "prompt": "Day 16: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 17,
+        "prompt": "Day 17: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 18,
+        "prompt": "Day 18: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 19,
+        "prompt": "Day 19: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 20,
+        "prompt": "Day 20: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 21,
+        "prompt": "Day 21: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 22,
+        "prompt": "Day 22: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 23,
+        "prompt": "Day 23: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 24,
+        "prompt": "Day 24: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 25,
+        "prompt": "Day 25: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 26,
+        "prompt": "Day 26: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 27,
+        "prompt": "Day 27: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 28,
+        "prompt": "Day 28: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 29,
+        "prompt": "Day 29: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 30,
+        "prompt": "Day 30: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 31,
+        "prompt": "Day 31: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 32,
+        "prompt": "Day 32: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 33,
+        "prompt": "Day 33: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 34,
+        "prompt": "Day 34: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 35,
+        "prompt": "Day 35: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 36,
+        "prompt": "Day 36: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 37,
+        "prompt": "Day 37: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 38,
+        "prompt": "Day 38: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 39,
+        "prompt": "Day 39: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 40,
+        "prompt": "Day 40: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 41,
+        "prompt": "Day 41: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 42,
+        "prompt": "Day 42: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 43,
+        "prompt": "Day 43: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 44,
+        "prompt": "Day 44: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 45,
+        "prompt": "Day 45: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 46,
+        "prompt": "Day 46: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 47,
+        "prompt": "Day 47: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 48,
+        "prompt": "Day 48: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 49,
+        "prompt": "Day 49: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 50,
+        "prompt": "Day 50: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 51,
+        "prompt": "Day 51: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 52,
+        "prompt": "Day 52: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 53,
+        "prompt": "Day 53: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 54,
+        "prompt": "Day 54: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 55,
+        "prompt": "Day 55: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 56,
+        "prompt": "Day 56: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 57,
+        "prompt": "Day 57: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 58,
+        "prompt": "Day 58: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 59,
+        "prompt": "Day 59: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 60,
+        "prompt": "Day 60: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 61,
+        "prompt": "Day 61: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 62,
+        "prompt": "Day 62: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 63,
+        "prompt": "Day 63: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 64,
+        "prompt": "Day 64: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 65,
+        "prompt": "Day 65: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 66,
+        "prompt": "Day 66: Practice receiving support, appreciation, or feedback without deflecting."
+      }
+    ]
+  },
+  {
+    "slug": "quarter-mastery-90",
+    "order": 11,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "title": "90-Day ARISE Mastery",
+    "teacher": "ARISE",
+    "lengthDays": 90,
+    "description": "Integrate belief, behaviour, pattern, and result across a full quarter.",
+    "category": "mastery",
+    "layer": "RESULT",
+    "difficulty": "intermediate",
+    "dailyTasks": [
+      {
+        "day": 1,
+        "prompt": "Day 1: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 2,
+        "prompt": "Day 2: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 3,
+        "prompt": "Day 3: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 4,
+        "prompt": "Day 4: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 5,
+        "prompt": "Day 5: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 6,
+        "prompt": "Day 6: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 7,
+        "prompt": "Day 7: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 8,
+        "prompt": "Day 8: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 9,
+        "prompt": "Day 9: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 10,
+        "prompt": "Day 10: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 11,
+        "prompt": "Day 11: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 12,
+        "prompt": "Day 12: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 13,
+        "prompt": "Day 13: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 14,
+        "prompt": "Day 14: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 15,
+        "prompt": "Day 15: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 16,
+        "prompt": "Day 16: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 17,
+        "prompt": "Day 17: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 18,
+        "prompt": "Day 18: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 19,
+        "prompt": "Day 19: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 20,
+        "prompt": "Day 20: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 21,
+        "prompt": "Day 21: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 22,
+        "prompt": "Day 22: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 23,
+        "prompt": "Day 23: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 24,
+        "prompt": "Day 24: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 25,
+        "prompt": "Day 25: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 26,
+        "prompt": "Day 26: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 27,
+        "prompt": "Day 27: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 28,
+        "prompt": "Day 28: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 29,
+        "prompt": "Day 29: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 30,
+        "prompt": "Day 30: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 31,
+        "prompt": "Day 31: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 32,
+        "prompt": "Day 32: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 33,
+        "prompt": "Day 33: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 34,
+        "prompt": "Day 34: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 35,
+        "prompt": "Day 35: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 36,
+        "prompt": "Day 36: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 37,
+        "prompt": "Day 37: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 38,
+        "prompt": "Day 38: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 39,
+        "prompt": "Day 39: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 40,
+        "prompt": "Day 40: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 41,
+        "prompt": "Day 41: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 42,
+        "prompt": "Day 42: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 43,
+        "prompt": "Day 43: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 44,
+        "prompt": "Day 44: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 45,
+        "prompt": "Day 45: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 46,
+        "prompt": "Day 46: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 47,
+        "prompt": "Day 47: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 48,
+        "prompt": "Day 48: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 49,
+        "prompt": "Day 49: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 50,
+        "prompt": "Day 50: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 51,
+        "prompt": "Day 51: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 52,
+        "prompt": "Day 52: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 53,
+        "prompt": "Day 53: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 54,
+        "prompt": "Day 54: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 55,
+        "prompt": "Day 55: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 56,
+        "prompt": "Day 56: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 57,
+        "prompt": "Day 57: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 58,
+        "prompt": "Day 58: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 59,
+        "prompt": "Day 59: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 60,
+        "prompt": "Day 60: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 61,
+        "prompt": "Day 61: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 62,
+        "prompt": "Day 62: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 63,
+        "prompt": "Day 63: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 64,
+        "prompt": "Day 64: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 65,
+        "prompt": "Day 65: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 66,
+        "prompt": "Day 66: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 67,
+        "prompt": "Day 67: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 68,
+        "prompt": "Day 68: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 69,
+        "prompt": "Day 69: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 70,
+        "prompt": "Day 70: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 71,
+        "prompt": "Day 71: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 72,
+        "prompt": "Day 72: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 73,
+        "prompt": "Day 73: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 74,
+        "prompt": "Day 74: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 75,
+        "prompt": "Day 75: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 76,
+        "prompt": "Day 76: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 77,
+        "prompt": "Day 77: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 78,
+        "prompt": "Day 78: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 79,
+        "prompt": "Day 79: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 80,
+        "prompt": "Day 80: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 81,
+        "prompt": "Day 81: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 82,
+        "prompt": "Day 82: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 83,
+        "prompt": "Day 83: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 84,
+        "prompt": "Day 84: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 85,
+        "prompt": "Day 85: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 86,
+        "prompt": "Day 86: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 87,
+        "prompt": "Day 87: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 88,
+        "prompt": "Day 88: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 89,
+        "prompt": "Day 89: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 90,
+        "prompt": "Day 90: Return to the practice after a drift without self-criticism."
+      }
+    ]
+  },
+  {
+    "slug": "purposeful-results-90",
+    "order": 12,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "title": "90-Day Purposeful Results",
+    "teacher": "ARISE",
+    "lengthDays": 90,
+    "description": "Connect meaningful action to visible outcomes.",
+    "category": "purpose",
+    "layer": "RESULT",
+    "difficulty": "intermediate",
+    "dailyTasks": [
+      {
+        "day": 1,
+        "prompt": "Day 1: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 2,
+        "prompt": "Day 2: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 3,
+        "prompt": "Day 3: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 4,
+        "prompt": "Day 4: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 5,
+        "prompt": "Day 5: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 6,
+        "prompt": "Day 6: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 7,
+        "prompt": "Day 7: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 8,
+        "prompt": "Day 8: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 9,
+        "prompt": "Day 9: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 10,
+        "prompt": "Day 10: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 11,
+        "prompt": "Day 11: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 12,
+        "prompt": "Day 12: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 13,
+        "prompt": "Day 13: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 14,
+        "prompt": "Day 14: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 15,
+        "prompt": "Day 15: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 16,
+        "prompt": "Day 16: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 17,
+        "prompt": "Day 17: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 18,
+        "prompt": "Day 18: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 19,
+        "prompt": "Day 19: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 20,
+        "prompt": "Day 20: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 21,
+        "prompt": "Day 21: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 22,
+        "prompt": "Day 22: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 23,
+        "prompt": "Day 23: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 24,
+        "prompt": "Day 24: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 25,
+        "prompt": "Day 25: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 26,
+        "prompt": "Day 26: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 27,
+        "prompt": "Day 27: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 28,
+        "prompt": "Day 28: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 29,
+        "prompt": "Day 29: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 30,
+        "prompt": "Day 30: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 31,
+        "prompt": "Day 31: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 32,
+        "prompt": "Day 32: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 33,
+        "prompt": "Day 33: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 34,
+        "prompt": "Day 34: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 35,
+        "prompt": "Day 35: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 36,
+        "prompt": "Day 36: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 37,
+        "prompt": "Day 37: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 38,
+        "prompt": "Day 38: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 39,
+        "prompt": "Day 39: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 40,
+        "prompt": "Day 40: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 41,
+        "prompt": "Day 41: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 42,
+        "prompt": "Day 42: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 43,
+        "prompt": "Day 43: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 44,
+        "prompt": "Day 44: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 45,
+        "prompt": "Day 45: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 46,
+        "prompt": "Day 46: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 47,
+        "prompt": "Day 47: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 48,
+        "prompt": "Day 48: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 49,
+        "prompt": "Day 49: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 50,
+        "prompt": "Day 50: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 51,
+        "prompt": "Day 51: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 52,
+        "prompt": "Day 52: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 53,
+        "prompt": "Day 53: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 54,
+        "prompt": "Day 54: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 55,
+        "prompt": "Day 55: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 56,
+        "prompt": "Day 56: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 57,
+        "prompt": "Day 57: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 58,
+        "prompt": "Day 58: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 59,
+        "prompt": "Day 59: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 60,
+        "prompt": "Day 60: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 61,
+        "prompt": "Day 61: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 62,
+        "prompt": "Day 62: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 63,
+        "prompt": "Day 63: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 64,
+        "prompt": "Day 64: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 65,
+        "prompt": "Day 65: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 66,
+        "prompt": "Day 66: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 67,
+        "prompt": "Day 67: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 68,
+        "prompt": "Day 68: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 69,
+        "prompt": "Day 69: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 70,
+        "prompt": "Day 70: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 71,
+        "prompt": "Day 71: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 72,
+        "prompt": "Day 72: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 73,
+        "prompt": "Day 73: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 74,
+        "prompt": "Day 74: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 75,
+        "prompt": "Day 75: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 76,
+        "prompt": "Day 76: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 77,
+        "prompt": "Day 77: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 78,
+        "prompt": "Day 78: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 79,
+        "prompt": "Day 79: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 80,
+        "prompt": "Day 80: Name the belief most active today and choose one supporting action."
+      },
+      {
+        "day": 81,
+        "prompt": "Day 81: Complete one small action before checking for outside approval."
+      },
+      {
+        "day": 82,
+        "prompt": "Day 82: Notice a repeated pattern and interrupt it with one conscious pause."
+      },
+      {
+        "day": 83,
+        "prompt": "Day 83: Write one piece of evidence that your identity is changing."
+      },
+      {
+        "day": 84,
+        "prompt": "Day 84: Practice receiving support, appreciation, or feedback without deflecting."
+      },
+      {
+        "day": 85,
+        "prompt": "Day 85: Protect one block of attention from avoidable interruption."
+      },
+      {
+        "day": 86,
+        "prompt": "Day 86: Close one open loop that has been draining energy."
+      },
+      {
+        "day": 87,
+        "prompt": "Day 87: Choose a response that your future self would recognize."
+      },
+      {
+        "day": 88,
+        "prompt": "Day 88: Record one result without turning it into a judgment."
+      },
+      {
+        "day": 89,
+        "prompt": "Day 89: Return to the practice after a drift without self-criticism."
+      },
+      {
+        "day": 90,
+        "prompt": "Day 90: Name the belief most active today and choose one supporting action."
+      }
+    ]
+  }
+]

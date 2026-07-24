@@ -1,0 +1,1602 @@
+[
+  {
+    "slug": "arise-reflection-1",
+    "order": 1,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "text": "Small actions become identity when repeated with intention.",
+    "author": "ARISE Reflection",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "arise-reflection-2",
+    "order": 2,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "text": "The next honest choice is often more useful than the last perfect plan.",
+    "author": "ARISE Reflection",
+    "category": "behaviour",
+    "tags": [
+      "behaviour"
+    ]
+  },
+  {
+    "slug": "arise-reflection-3",
+    "order": 3,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "text": "A pattern loses power when it is seen clearly and met consistently.",
+    "author": "ARISE Reflection",
+    "category": "pattern",
+    "tags": [
+      "pattern"
+    ]
+  },
+  {
+    "slug": "arise-reflection-4",
+    "order": 4,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "text": "Results become clearer when attention stops scattering itself.",
+    "author": "ARISE Reflection",
+    "category": "result",
+    "tags": [
+      "result"
+    ]
+  },
+  {
+    "slug": "arise-reflection-5",
+    "order": 5,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "text": "The morning does not need drama; it needs a clean beginning.",
+    "author": "ARISE Reflection",
+    "category": "morning",
+    "tags": [
+      "morning"
+    ]
+  },
+  {
+    "slug": "arise-reflection-6",
+    "order": 6,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "text": "Close the day by learning from it, not arguing with it.",
+    "author": "ARISE Reflection",
+    "category": "evening",
+    "tags": [
+      "evening"
+    ]
+  },
+  {
+    "slug": "arise-reflection-7",
+    "order": 7,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "text": "Focus is a form of respect for what matters.",
+    "author": "ARISE Reflection",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "arise-reflection-8",
+    "order": 8,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "text": "Leadership begins with the state you bring into the room.",
+    "author": "ARISE Reflection",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "arise-reflection-9",
+    "order": 9,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "text": "Receiving expands when responsibility grows with it.",
+    "author": "ARISE Reflection",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "arise-reflection-10",
+    "order": 10,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "text": "Gratitude is attention returning to support.",
+    "author": "ARISE Reflection",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "arise-reflection-11",
+    "order": 11,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Your old story may be familiar without being final.",
+    "author": "ARISE Reflection",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "arise-reflection-12",
+    "order": 12,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Behaviour is belief made visible for a moment.",
+    "author": "ARISE Reflection",
+    "category": "behaviour",
+    "tags": [
+      "behaviour"
+    ]
+  },
+  {
+    "slug": "arise-reflection-13",
+    "order": 13,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Repetition quietly teaches the self what to expect.",
+    "author": "ARISE Reflection",
+    "category": "pattern",
+    "tags": [
+      "pattern"
+    ]
+  },
+  {
+    "slug": "arise-reflection-14",
+    "order": 14,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Progress often arrives first as a calmer response.",
+    "author": "ARISE Reflection",
+    "category": "result",
+    "tags": [
+      "result"
+    ]
+  },
+  {
+    "slug": "arise-reflection-15",
+    "order": 15,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "A deliberate breath can interrupt an inherited reaction.",
+    "author": "ARISE Reflection",
+    "category": "morning",
+    "tags": [
+      "morning"
+    ]
+  },
+  {
+    "slug": "arise-reflection-16",
+    "order": 16,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Discipline is less severe when it is rooted in care.",
+    "author": "ARISE Reflection",
+    "category": "evening",
+    "tags": [
+      "evening"
+    ]
+  },
+  {
+    "slug": "arise-reflection-17",
+    "order": 17,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Clarity grows when competing signals are reduced.",
+    "author": "ARISE Reflection",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "arise-reflection-18",
+    "order": 18,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The body often notices truth before the mind explains it.",
+    "author": "ARISE Reflection",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "arise-reflection-19",
+    "order": 19,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "One kept promise can change the tone of a day.",
+    "author": "ARISE Reflection",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "arise-reflection-20",
+    "order": 20,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The result is feedback, not a verdict on your worth.",
+    "author": "ARISE Reflection",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "arise-reflection-21",
+    "order": 21,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Small actions become identity when repeated with intention. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "arise-reflection-22",
+    "order": 22,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The next honest choice is often more useful than the last perfect plan. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "behaviour",
+    "tags": [
+      "behaviour"
+    ]
+  },
+  {
+    "slug": "arise-reflection-23",
+    "order": 23,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "A pattern loses power when it is seen clearly and met consistently. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "pattern",
+    "tags": [
+      "pattern"
+    ]
+  },
+  {
+    "slug": "arise-reflection-24",
+    "order": 24,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Results become clearer when attention stops scattering itself. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "result",
+    "tags": [
+      "result"
+    ]
+  },
+  {
+    "slug": "arise-reflection-25",
+    "order": 25,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The morning does not need drama; it needs a clean beginning. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "morning",
+    "tags": [
+      "morning"
+    ]
+  },
+  {
+    "slug": "arise-reflection-26",
+    "order": 26,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Close the day by learning from it, not arguing with it. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "evening",
+    "tags": [
+      "evening"
+    ]
+  },
+  {
+    "slug": "arise-reflection-27",
+    "order": 27,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Focus is a form of respect for what matters. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "arise-reflection-28",
+    "order": 28,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Leadership begins with the state you bring into the room. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "arise-reflection-29",
+    "order": 29,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Receiving expands when responsibility grows with it. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "arise-reflection-30",
+    "order": 30,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Gratitude is attention returning to support. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "arise-reflection-31",
+    "order": 31,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Your old story may be familiar without being final. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "arise-reflection-32",
+    "order": 32,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Behaviour is belief made visible for a moment. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "behaviour",
+    "tags": [
+      "behaviour"
+    ]
+  },
+  {
+    "slug": "arise-reflection-33",
+    "order": 33,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Repetition quietly teaches the self what to expect. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "pattern",
+    "tags": [
+      "pattern"
+    ]
+  },
+  {
+    "slug": "arise-reflection-34",
+    "order": 34,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Progress often arrives first as a calmer response. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "result",
+    "tags": [
+      "result"
+    ]
+  },
+  {
+    "slug": "arise-reflection-35",
+    "order": 35,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "A deliberate breath can interrupt an inherited reaction. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "morning",
+    "tags": [
+      "morning"
+    ]
+  },
+  {
+    "slug": "arise-reflection-36",
+    "order": 36,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Discipline is less severe when it is rooted in care. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "evening",
+    "tags": [
+      "evening"
+    ]
+  },
+  {
+    "slug": "arise-reflection-37",
+    "order": 37,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Clarity grows when competing signals are reduced. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "arise-reflection-38",
+    "order": 38,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The body often notices truth before the mind explains it. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "arise-reflection-39",
+    "order": 39,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "One kept promise can change the tone of a day. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "arise-reflection-40",
+    "order": 40,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The result is feedback, not a verdict on your worth. Practice 2: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "arise-reflection-41",
+    "order": 41,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Small actions become identity when repeated with intention. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "arise-reflection-42",
+    "order": 42,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The next honest choice is often more useful than the last perfect plan. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "behaviour",
+    "tags": [
+      "behaviour"
+    ]
+  },
+  {
+    "slug": "arise-reflection-43",
+    "order": 43,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "A pattern loses power when it is seen clearly and met consistently. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "pattern",
+    "tags": [
+      "pattern"
+    ]
+  },
+  {
+    "slug": "arise-reflection-44",
+    "order": 44,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Results become clearer when attention stops scattering itself. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "result",
+    "tags": [
+      "result"
+    ]
+  },
+  {
+    "slug": "arise-reflection-45",
+    "order": 45,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The morning does not need drama; it needs a clean beginning. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "morning",
+    "tags": [
+      "morning"
+    ]
+  },
+  {
+    "slug": "arise-reflection-46",
+    "order": 46,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Close the day by learning from it, not arguing with it. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "evening",
+    "tags": [
+      "evening"
+    ]
+  },
+  {
+    "slug": "arise-reflection-47",
+    "order": 47,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Focus is a form of respect for what matters. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "arise-reflection-48",
+    "order": 48,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Leadership begins with the state you bring into the room. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "arise-reflection-49",
+    "order": 49,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Receiving expands when responsibility grows with it. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "arise-reflection-50",
+    "order": 50,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Gratitude is attention returning to support. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "arise-reflection-51",
+    "order": 51,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Your old story may be familiar without being final. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "arise-reflection-52",
+    "order": 52,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Behaviour is belief made visible for a moment. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "behaviour",
+    "tags": [
+      "behaviour"
+    ]
+  },
+  {
+    "slug": "arise-reflection-53",
+    "order": 53,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Repetition quietly teaches the self what to expect. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "pattern",
+    "tags": [
+      "pattern"
+    ]
+  },
+  {
+    "slug": "arise-reflection-54",
+    "order": 54,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Progress often arrives first as a calmer response. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "result",
+    "tags": [
+      "result"
+    ]
+  },
+  {
+    "slug": "arise-reflection-55",
+    "order": 55,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "A deliberate breath can interrupt an inherited reaction. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "morning",
+    "tags": [
+      "morning"
+    ]
+  },
+  {
+    "slug": "arise-reflection-56",
+    "order": 56,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Discipline is less severe when it is rooted in care. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "evening",
+    "tags": [
+      "evening"
+    ]
+  },
+  {
+    "slug": "arise-reflection-57",
+    "order": 57,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Clarity grows when competing signals are reduced. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "arise-reflection-58",
+    "order": 58,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The body often notices truth before the mind explains it. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "arise-reflection-59",
+    "order": 59,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "One kept promise can change the tone of a day. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "arise-reflection-60",
+    "order": 60,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The result is feedback, not a verdict on your worth. Practice 3: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "arise-reflection-61",
+    "order": 61,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Small actions become identity when repeated with intention. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "arise-reflection-62",
+    "order": 62,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The next honest choice is often more useful than the last perfect plan. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "behaviour",
+    "tags": [
+      "behaviour"
+    ]
+  },
+  {
+    "slug": "arise-reflection-63",
+    "order": 63,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "A pattern loses power when it is seen clearly and met consistently. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "pattern",
+    "tags": [
+      "pattern"
+    ]
+  },
+  {
+    "slug": "arise-reflection-64",
+    "order": 64,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Results become clearer when attention stops scattering itself. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "result",
+    "tags": [
+      "result"
+    ]
+  },
+  {
+    "slug": "arise-reflection-65",
+    "order": 65,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The morning does not need drama; it needs a clean beginning. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "morning",
+    "tags": [
+      "morning"
+    ]
+  },
+  {
+    "slug": "arise-reflection-66",
+    "order": 66,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Close the day by learning from it, not arguing with it. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "evening",
+    "tags": [
+      "evening"
+    ]
+  },
+  {
+    "slug": "arise-reflection-67",
+    "order": 67,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Focus is a form of respect for what matters. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "arise-reflection-68",
+    "order": 68,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Leadership begins with the state you bring into the room. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "arise-reflection-69",
+    "order": 69,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Receiving expands when responsibility grows with it. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "arise-reflection-70",
+    "order": 70,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Gratitude is attention returning to support. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "arise-reflection-71",
+    "order": 71,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Your old story may be familiar without being final. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "arise-reflection-72",
+    "order": 72,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Behaviour is belief made visible for a moment. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "behaviour",
+    "tags": [
+      "behaviour"
+    ]
+  },
+  {
+    "slug": "arise-reflection-73",
+    "order": 73,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Repetition quietly teaches the self what to expect. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "pattern",
+    "tags": [
+      "pattern"
+    ]
+  },
+  {
+    "slug": "arise-reflection-74",
+    "order": 74,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Progress often arrives first as a calmer response. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "result",
+    "tags": [
+      "result"
+    ]
+  },
+  {
+    "slug": "arise-reflection-75",
+    "order": 75,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "A deliberate breath can interrupt an inherited reaction. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "morning",
+    "tags": [
+      "morning"
+    ]
+  },
+  {
+    "slug": "arise-reflection-76",
+    "order": 76,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Discipline is less severe when it is rooted in care. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "evening",
+    "tags": [
+      "evening"
+    ]
+  },
+  {
+    "slug": "arise-reflection-77",
+    "order": 77,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Clarity grows when competing signals are reduced. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "arise-reflection-78",
+    "order": 78,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The body often notices truth before the mind explains it. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "arise-reflection-79",
+    "order": 79,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "One kept promise can change the tone of a day. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "arise-reflection-80",
+    "order": 80,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The result is feedback, not a verdict on your worth. Practice 4: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "arise-reflection-81",
+    "order": 81,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Small actions become identity when repeated with intention. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "arise-reflection-82",
+    "order": 82,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The next honest choice is often more useful than the last perfect plan. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "behaviour",
+    "tags": [
+      "behaviour"
+    ]
+  },
+  {
+    "slug": "arise-reflection-83",
+    "order": 83,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "A pattern loses power when it is seen clearly and met consistently. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "pattern",
+    "tags": [
+      "pattern"
+    ]
+  },
+  {
+    "slug": "arise-reflection-84",
+    "order": 84,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Results become clearer when attention stops scattering itself. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "result",
+    "tags": [
+      "result"
+    ]
+  },
+  {
+    "slug": "arise-reflection-85",
+    "order": 85,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The morning does not need drama; it needs a clean beginning. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "morning",
+    "tags": [
+      "morning"
+    ]
+  },
+  {
+    "slug": "arise-reflection-86",
+    "order": 86,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Close the day by learning from it, not arguing with it. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "evening",
+    "tags": [
+      "evening"
+    ]
+  },
+  {
+    "slug": "arise-reflection-87",
+    "order": 87,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Focus is a form of respect for what matters. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "arise-reflection-88",
+    "order": 88,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Leadership begins with the state you bring into the room. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "arise-reflection-89",
+    "order": 89,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Receiving expands when responsibility grows with it. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "arise-reflection-90",
+    "order": 90,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Gratitude is attention returning to support. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  },
+  {
+    "slug": "arise-reflection-91",
+    "order": 91,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Your old story may be familiar without being final. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "belief",
+    "tags": [
+      "belief"
+    ]
+  },
+  {
+    "slug": "arise-reflection-92",
+    "order": 92,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Behaviour is belief made visible for a moment. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "behaviour",
+    "tags": [
+      "behaviour"
+    ]
+  },
+  {
+    "slug": "arise-reflection-93",
+    "order": 93,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Repetition quietly teaches the self what to expect. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "pattern",
+    "tags": [
+      "pattern"
+    ]
+  },
+  {
+    "slug": "arise-reflection-94",
+    "order": 94,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Progress often arrives first as a calmer response. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "result",
+    "tags": [
+      "result"
+    ]
+  },
+  {
+    "slug": "arise-reflection-95",
+    "order": 95,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "A deliberate breath can interrupt an inherited reaction. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "morning",
+    "tags": [
+      "morning"
+    ]
+  },
+  {
+    "slug": "arise-reflection-96",
+    "order": 96,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Discipline is less severe when it is rooted in care. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "evening",
+    "tags": [
+      "evening"
+    ]
+  },
+  {
+    "slug": "arise-reflection-97",
+    "order": 97,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "Clarity grows when competing signals are reduced. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "focus",
+    "tags": [
+      "focus"
+    ]
+  },
+  {
+    "slug": "arise-reflection-98",
+    "order": 98,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The body often notices truth before the mind explains it. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "leadership",
+    "tags": [
+      "leadership"
+    ]
+  },
+  {
+    "slug": "arise-reflection-99",
+    "order": 99,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "One kept promise can change the tone of a day. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "wealth",
+    "tags": [
+      "wealth"
+    ]
+  },
+  {
+    "slug": "arise-reflection-100",
+    "order": 100,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "text": "The result is feedback, not a verdict on your worth. Practice 5: meet it in a new moment.",
+    "author": "ARISE Reflection",
+    "category": "gratitude",
+    "tags": [
+      "gratitude"
+    ]
+  }
+]

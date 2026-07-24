@@ -1,0 +1,314 @@
+[
+  {
+    "slug": "mindful-awareness",
+    "order": 1,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "name": "Mindful Awareness",
+    "icon": "mind",
+    "tagline": "Notice the thought before it becomes the pattern",
+    "tradition": "mind",
+    "exerciseCount": 2,
+    "exercises": [
+      {
+        "title": "Three-Minute Witness",
+        "description": "A short ARISE practice for mindful awareness.",
+        "durationMinutes": 3,
+        "steps": [
+          "Sit upright.",
+          "Name the pattern",
+          "Take three steady breaths.",
+          "Record one honest observation."
+        ]
+      },
+      {
+        "title": "Insight to Action",
+        "description": "Convert reflection into one visible next step.",
+        "durationMinutes": 5,
+        "steps": [
+          "Write the insight.",
+          "Ask what it requires.",
+          "Choose one action.",
+          "Complete it today."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "identity-repetition",
+    "order": 2,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "name": "Identity Through Repetition",
+    "icon": "repeat",
+    "tagline": "Small repeated actions become believable evidence",
+    "tradition": "science",
+    "exerciseCount": 2,
+    "exercises": [
+      {
+        "title": "Evidence List",
+        "description": "A short ARISE practice for identity through repetition.",
+        "durationMinutes": 7,
+        "steps": [
+          "Sit upright.",
+          "Choose the clean action",
+          "Take three steady breaths.",
+          "Record one honest observation."
+        ]
+      },
+      {
+        "title": "Insight to Action",
+        "description": "Convert reflection into one visible next step.",
+        "durationMinutes": 5,
+        "steps": [
+          "Write the insight.",
+          "Ask what it requires.",
+          "Choose one action.",
+          "Complete it today."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "conscious-leadership",
+    "order": 3,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": true,
+    "name": "Conscious Leadership",
+    "icon": "compass",
+    "tagline": "Lead from clarity before urgency",
+    "tradition": "mind",
+    "exerciseCount": 2,
+    "exercises": [
+      {
+        "title": "Three-Minute Witness",
+        "description": "A short ARISE practice for conscious leadership.",
+        "durationMinutes": 3,
+        "steps": [
+          "Sit upright.",
+          "Name the pattern",
+          "Take three steady breaths.",
+          "Record one honest observation."
+        ]
+      },
+      {
+        "title": "Insight to Action",
+        "description": "Convert reflection into one visible next step.",
+        "durationMinutes": 5,
+        "steps": [
+          "Write the insight.",
+          "Ask what it requires.",
+          "Choose one action.",
+          "Complete it today."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "inner-discipline",
+    "order": 4,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Inner Discipline",
+    "icon": "fire",
+    "tagline": "Return to what matters when mood changes",
+    "tradition": "mind",
+    "exerciseCount": 2,
+    "exercises": [
+      {
+        "title": "Evidence List",
+        "description": "A short ARISE practice for inner discipline.",
+        "durationMinutes": 7,
+        "steps": [
+          "Sit upright.",
+          "Choose the clean action",
+          "Take three steady breaths.",
+          "Record one honest observation."
+        ]
+      },
+      {
+        "title": "Insight to Action",
+        "description": "Convert reflection into one visible next step.",
+        "durationMinutes": 5,
+        "steps": [
+          "Write the insight.",
+          "Ask what it requires.",
+          "Choose one action.",
+          "Complete it today."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "receiving-capacity",
+    "order": 5,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Receiving Capacity",
+    "icon": "heart",
+    "tagline": "Let support, value, and appreciation land",
+    "tradition": "mind",
+    "exerciseCount": 2,
+    "exercises": [
+      {
+        "title": "Three-Minute Witness",
+        "description": "A short ARISE practice for receiving capacity.",
+        "durationMinutes": 3,
+        "steps": [
+          "Sit upright.",
+          "Name the pattern",
+          "Take three steady breaths.",
+          "Record one honest observation."
+        ]
+      },
+      {
+        "title": "Insight to Action",
+        "description": "Convert reflection into one visible next step.",
+        "durationMinutes": 5,
+        "steps": [
+          "Write the insight.",
+          "Ask what it requires.",
+          "Choose one action.",
+          "Complete it today."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "energy-stewardship",
+    "order": 6,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Energy Stewardship",
+    "icon": "shield",
+    "tagline": "Protect attention as a serious resource",
+    "tradition": "science",
+    "exerciseCount": 2,
+    "exercises": [
+      {
+        "title": "Evidence List",
+        "description": "A short ARISE practice for energy stewardship.",
+        "durationMinutes": 7,
+        "steps": [
+          "Sit upright.",
+          "Choose the clean action",
+          "Take three steady breaths.",
+          "Record one honest observation."
+        ]
+      },
+      {
+        "title": "Insight to Action",
+        "description": "Convert reflection into one visible next step.",
+        "durationMinutes": 5,
+        "steps": [
+          "Write the insight.",
+          "Ask what it requires.",
+          "Choose one action.",
+          "Complete it today."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "gratitude-and-result",
+    "order": 7,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Gratitude and Result",
+    "icon": "gratitude",
+    "tagline": "Train attention to recognize what is already working",
+    "tradition": "ancient",
+    "exerciseCount": 2,
+    "exercises": [
+      {
+        "title": "Three-Minute Witness",
+        "description": "A short ARISE practice for gratitude and result.",
+        "durationMinutes": 3,
+        "steps": [
+          "Sit upright.",
+          "Name the pattern",
+          "Take three steady breaths.",
+          "Record one honest observation."
+        ]
+      },
+      {
+        "title": "Insight to Action",
+        "description": "Convert reflection into one visible next step.",
+        "durationMinutes": 5,
+        "steps": [
+          "Write the insight.",
+          "Ask what it requires.",
+          "Choose one action.",
+          "Complete it today."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "reflective-action",
+    "order": 8,
+    "status": "PUBLISHED",
+    "isActive": true,
+    "source": "arise-production-seed",
+    "seedVersion": "1.0.0",
+    "systemContent": true,
+    "featured": false,
+    "name": "Reflective Action",
+    "icon": "target",
+    "tagline": "Insight becomes useful when it changes a choice",
+    "tradition": "mind",
+    "exerciseCount": 2,
+    "exercises": [
+      {
+        "title": "Evidence List",
+        "description": "A short ARISE practice for reflective action.",
+        "durationMinutes": 7,
+        "steps": [
+          "Sit upright.",
+          "Choose the clean action",
+          "Take three steady breaths.",
+          "Record one honest observation."
+        ]
+      },
+      {
+        "title": "Insight to Action",
+        "description": "Convert reflection into one visible next step.",
+        "durationMinutes": 5,
+        "steps": [
+          "Write the insight.",
+          "Ask what it requires.",
+          "Choose one action.",
+          "Complete it today."
+        ]
+      }
+    ]
+  }
+]
